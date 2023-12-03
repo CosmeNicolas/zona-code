@@ -58,3 +58,8 @@ body {
     border-color: white;
 }
 
+@media (max-width: 991.98px) {
+    .cuadro:hover {
+        box-shadow: 0 0 0 transparent; /* Hacer que la sombra sea transparente en lugar de mostrarla */
+    }
+}
