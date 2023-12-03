@@ -27,7 +27,34 @@ body {
   .texto-principal {
     font-family: 'Pixelify Sans';
     text-align: center;
-    font-size: 4rem;
     margin-top: 5px;
+    margin-bottom: 5px;
 
   }
+  
+  .texto{
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .cuadro {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    transition: border-width 0.3s, border-color 0.3s;
+    border: 2px solid transparent; /* Inicialmente, borde transparente */
+}
+
+.cuadro-1 {
+    background-color: #152340;
+}
+
+.cuadro-2 {
+    background-color: #152340; 
+}
+
+/* Cambiamos el borde y el color al pasar el ratón sobre el cuadro */
+.cuadro:hover {
+    border-width: 4px;
+    border-color: white;
+}
+
