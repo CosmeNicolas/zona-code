@@ -37,3 +37,23 @@ height: auto;
     margin-bottom: 40px;
     position: relative;
 }
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid white;
+    margin: 20px 0px;
+}
+ul{
+padding: 0;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+    
+
+}
+ul li a{
+    text-decoration:  none;
+    color: white;
+    
+}
