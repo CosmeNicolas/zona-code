@@ -50,19 +50,19 @@ footer {
   border-bottom: 1px solid white;
   margin: 20px 0px;
 }
-ul {
+footer ul {
   padding: 0;
 }
-ul li {
+footer ul li {
   list-style: none;
   margin-bottom: 12px;
 }
-ul li a {
+footer ul li a {
   text-decoration: none;
   color: white;
 }
 
-form {
+footer form {
   padding-bottom: 15px;
   display: flex;
   align-items: center;
@@ -71,11 +71,11 @@ form {
   margin-bottom: 50px;
 }
 
-form .far {
+footer form .far {
   font-size: 18px;
   margin-right: 10px;
 }
-form input {
+footer form input {
   width: 100%;
   background: transparent;
   color: white;
@@ -83,7 +83,7 @@ form input {
   outline: none;
 }
 
-form button {
+footer form button {
   background: transparent;
   border: 0;
   outline: none;
