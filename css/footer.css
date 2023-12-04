@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 footer {
   width: 100%;
   position: relative;
@@ -21,7 +17,7 @@ footer {
 
   margin-bottom: 30px;
 }
-.row {
+.row-footer {
   width: 85%;
   margin: auto;
   display: flex;
@@ -29,7 +25,7 @@ footer {
   align-items: flex-start;
   justify-content: space-between;
 }
-.col {
+.col-footer {
   flex-basis: 25%;
   padding: 10px;
 }
@@ -42,8 +38,6 @@ footer {
   width: fit-content;
   margin-bottom: 40px;
   position: relative;
-}
-.cuadroPrimero {
 }
 .email-id {
   width: fit-content;
