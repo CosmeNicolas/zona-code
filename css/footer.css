@@ -57,3 +57,24 @@ ul li a{
     color: white;
     
 }
+
+form .far{
+    font-size: 18px;
+    margin-right: 10px;
+    }
+    form input{
+        width: 100%;
+        background: transparent;
+        color: white;
+        border: 0 ;
+        outline: none;
+    }
+
+    form button{
+        background: transparent;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+    }
