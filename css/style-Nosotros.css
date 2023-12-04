@@ -93,6 +93,13 @@ body {
     background-color: #2980b9;
   }
   
+  .caja-con-texto {
+    background-color: #36D9BB; /* Color de fondo del recuadro */
+    color: rgb(10, 1, 1); /* Color del texto */
+    padding: 20px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
   
 @media (max-width: 991.98px) {
     .cuadro:hover {
