@@ -134,7 +134,7 @@ body {
     content: '';
     position: absolute;
     inset: -10px 140px;
-    background: linear-gradient(315deg,#6f04d9,#36D9BB);
+    background: linear-gradient(315deg,#dff3ff,#36D9BB);
     transition: 0.5s;
     animation: animate 4s linear infinite;
 }
