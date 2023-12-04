@@ -218,6 +218,135 @@ body {
     letter-spacing: 0.3em;
 }
 
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(6, 40, 78) 91.6%);
+    color: white;
+    padding: 5px 0px 5px;
+    border-top-left-radius: 125px;
+  
+    font-size: 13px;
+    line-height: 20px;
+    height: auto;
+  }
+  .logo {
+    width: 80px;
+  
+    margin-bottom: 30px;
+  }
+  .row-footer {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .col-footer {
+    flex-basis: 25%;
+    padding: 10px;
+  }
+  .col-footer:nth-child(2),
+  .col-footer:nth-child(3) {
+    flex-basis: 15%;
+  }
+  
+  .col-footer h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .email-id {
+    width: fit-content;
+    border-bottom: 1px solid white;
+    margin: 20px 0px;
+  }
+  ul {
+    padding: 0;
+  }
+  ul li {
+    list-style: none;
+    margin-bottom: 12px;
+  }
+  ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    margin-bottom: 50px;
+  }
+  
+  form .far {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  form input {
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+  }
+  
+  form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+  }
+  @import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
+  .social-icons a {
+    margin: 0 0px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0);
+    color: var(--color);
+    font-size: 1.5em;
+    -webkit-box-reflect: below 5px
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  }
+  
+  .social-icons a:hover {
+    background: var(--color);
+    color: #050801;
+    box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color),
+      0 0 200px var(--color);
+  }
+  
+  @media (max-width: 700px) {
+    footer {
+      position: relative;
+    }
+    .col {
+      flex-basis: 100%;
+    }
+    .col:nth-child(2),
+    .col:nth-child(3) {
+      flex-basis: 100%;
+    }
+  }
 @media (max-width: 767px) {
     .box{
         position: relative;
