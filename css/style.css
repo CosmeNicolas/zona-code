@@ -21,3 +21,7 @@ nav {
     sans-serif;
   ;
 }
+
+.modal-fondo{
+  background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(2, 8, 15) 91.6%);
+}
