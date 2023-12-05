@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 footer {
   width: 100%;
   position: relative;
@@ -45,8 +41,7 @@ footer {
   margin-bottom: 40px;
   position: relative;
 }
-.cuadroPrimero {
-}
+
 .email-id-footer {
   width: fit-content;
   border-bottom: 1px solid white;
