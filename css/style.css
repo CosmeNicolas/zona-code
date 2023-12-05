@@ -21,3 +21,12 @@ nav {
     sans-serif;
   ;
 }
+
+.modalTexto { color: aliceblue;
+
+}
+
+.modal-contacto{
+  background-image: url(../img/1920x1200-px-blur-gaussian-1539045-wallhere.com.jpg);
+    font-size: 20px;
+  }

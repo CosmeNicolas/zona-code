@@ -72,14 +72,17 @@
                 <a class="nav-link text-light" href="#">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light disabled" aria-disabled="true"
-                  >Contacto</a
+                <a
+                  class="nav-link text-light"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactoModal"
+                  href="./contactoModal.html"
                 >
+                  Contacto
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light disabled" aria-disabled="true"
-                  >Login</a
-                >
+                <a class="nav-link text-light" href="./login.html">Login</a>
               </li>
               <li>
                 <a class="nav-link text-light disabled" aria-disabled="true"
@@ -108,11 +111,11 @@
     </header>
     <main class="mt-md-4 mt-lg-1">
       <div class="container">
-        <div class="row mt-4">
+        <div class="row mt-3">
           <div class="col-sm-12 col-md-6">
             <div class="container text-light">
               <a href="../index.html"
-                ><i class="fa-solid fa-circle-arrow-left tamIcono"></i
+                ><i class="fa-solid fa-circle-arrow-left tamIcono fa-2x"></i
               ></a>
               <h2 class="text-center">Bienvenido</h2>
               <form class="justify-content-center">
@@ -150,11 +153,10 @@
                     >Recordarme</label
                   >
                 </div>
-                <div class="d-flex justify-content-center btn-primary">
+                <div class="d-flex justify-content-center">
                   <button
-                    id="botonIniciar"
                     type="submit"
-                    class="btn botonInit"
+                    class="btn btn-primary"
                     href="../index.html"
                   >
                     Iniciar Sesión
@@ -176,12 +178,12 @@
               </form>
               <div class="text-center pb-4">
                 <p>Inicia sesión con:</p>
-                <a href="../error404.html" class="btn btn-outline-primary"
+                <a href="../error404.html" class="btn btn-primary me-2"
                   ><i class="fa-brands fa-facebook me-2"></i>Facebook</a
                 >
                 <a
                   href="../error404.html"
-                  class="btn btn-outline-danger btn-block btnFG"
+                  class="btn btn-danger btn-block btnFG"
                   ><i class="fa-brands fa-instagram me-2"></i>Google</a
                 >
               </div>
