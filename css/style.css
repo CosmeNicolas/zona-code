@@ -36,7 +36,7 @@ nav {
 
 
 @media screen and (max-width: 767px) {
-      .img-slider {
+      .carousel {
          display: none;
         }
 }
