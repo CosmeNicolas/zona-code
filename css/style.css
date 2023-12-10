@@ -31,7 +31,10 @@ nav {
  object-fit: cover;
 }
 
-
+.img-principal {
+  height: 500px;
+    object-fit: cover;
+}
 
 
 
