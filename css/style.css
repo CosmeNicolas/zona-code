@@ -29,14 +29,16 @@ nav {
 .img-slider{
  height: 450px;
  object-fit: cover;
-    
 }
 
 
 
 
+
+/* 
 @media screen and (max-width: 767px) {
       .carousel {
-         display: none;
-        }
-}
+        height: 800px;
+        object-fit: cover;
+        } 
+} */
