@@ -32,16 +32,24 @@ nav {
 }
 
 .img-principal {
-  height: 500px;
+  height: 200px;
     object-fit: cover;
+    border-radius: 50% solid 2px black;
+} 
+
+.fondo{
+  background: linear-gradient(0deg, rgba(2, 8, 15, 1) 0%, #1f3565 58%, #0d1320 100%);
+}
+
+/* productos */
+.productos-tittulo{
+  font-family: 'Nunito Sans', sans-serif;;
+}
+
+
+.img-card-producto{
+  height: 300px;
 }
 
 
 
-/* 
-@media screen and (max-width: 767px) {
-      .carousel {
-        height: 800px;
-        object-fit: cover;
-        } 
-} */
