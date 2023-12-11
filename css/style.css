@@ -43,7 +43,8 @@ nav {
 
 /* productos */
 .productos-tittulo{
-  font-family: 'Nunito Sans', sans-serif;;
+  font-family: 'Pixelify Sans',
+      sans-serif;
 }
 
 
@@ -52,4 +53,16 @@ nav {
 }
 
 
+ @media screen and (max-width: 767px){
+  .img-card-producto {
+      height: 200px;
+      width: 200px;
+    }
+} 
 
+@media all and (min-width: 768px) and (max-width: 991px){
+  .img-card-producto {
+      height: 200px;
+      width: 200px;
+    }
+}
