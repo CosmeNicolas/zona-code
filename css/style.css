@@ -31,14 +31,38 @@ nav {
  object-fit: cover;
 }
 
+.img-principal {
+  height: 200px;
+    object-fit: cover;
+    border-radius: 50% solid 2px black;
+} 
+
+.fondo{
+  background: linear-gradient(0deg, rgba(2, 8, 15, 1) 0%, #1f3565 58%, #0d1320 100%);
+}
+
+/* productos */
+.productos-tittulo{
+  font-family: 'Pixelify Sans',
+      sans-serif;
+}
 
 
+.img-card-producto{
+  height: 300px;
+}
 
 
-/* 
-@media screen and (max-width: 767px) {
-      .carousel {
-        height: 800px;
-        object-fit: cover;
-        } 
-} */
+ @media screen and (max-width: 767px){
+  .img-card-producto {
+      height: 200px;
+      width: 200px;
+    }
+} 
+
+@media all and (min-width: 768px) and (max-width: 991px){
+  .img-card-producto {
+      height: 200px;
+      width: 200px;
+    }
+}
