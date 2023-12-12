@@ -17,9 +17,16 @@ main {
 
 nav {
   background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(6, 40, 78) 91.6%);
-  font-family: 'Pixelify Sans',
-    sans-serif;
-  ;
+  font-family: 'Pixelify Sans',sans-serif;
+  
+}
+
+.estilo-nav{
+  background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(6, 40, 78) 91.6%);
+}
+
+.estilo-nav-header{
+  Background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(5, 31, 60) 91.6%);
 }
 
 .modal-fondo{
