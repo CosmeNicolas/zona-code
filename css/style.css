@@ -56,7 +56,7 @@ nav {
       sans-serif;
 }
 
-.img-fluid{
+.imagen-carrousel{
   display: none;
 }
 
@@ -79,7 +79,7 @@ nav {
       height: 200px;
       width: 200px;
     }
-  .img-fluid{
+  .imagen-carrousel{
     display: inline;
   }
 
