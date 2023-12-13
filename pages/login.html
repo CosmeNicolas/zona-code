@@ -70,7 +70,9 @@
                 <a class="nav-link text-light" href="#">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="./Nosotros.html">Nosotros</a>
+                <a class="nav-link text-light" href="./Nosotros.html"
+                  >Nosotros</a
+                >
               </li>
               <li class="nav-item">
                 <a
@@ -83,7 +85,11 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  text-light active text-decoration-underline" href="./login.html">Login</a>
+                <a
+                  class="nav-link text-light active text-decoration-underline"
+                  href="./login.html"
+                  >Login</a
+                >
               </li>
               <li>
                 <a class="nav-link text-light disabled" aria-disabled="true"
@@ -157,7 +163,7 @@
                 <div class="d-flex justify-content-center">
                   <button
                     type="submit"
-                    class="btn btn-primary"
+                    class="btn btn-info"
                     href="../index.html"
                   >
                     Iniciar Sesión
@@ -166,9 +172,13 @@
                 <div class="my-3 text-center">
                   <span class="me-2"
                     >No tienes cuenta?
-                    <a class="text-black" href="./registro.html"
-                      >Registrate</a
-                    ></span
+                    <button
+                      class="btn btn-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#registrarContacto"
+                    >
+                      Registrate
+                    </button> </span
                   ><br />
                   <span class="me-2"
                     ><a class="text-black" href="../pages/error404.html"
@@ -306,6 +316,98 @@
         </div>
       </div>
     </main>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="registrarContacto"
+      tabindex="-1"
+      aria-labelledby="registrarContactoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-info">
+          <div class="modal-header modal-registro">
+            <h2
+              class="modal-title fs-5 text-center mx-auto me-3 text-white" 
+              id="registrarContactoLabel"
+            >
+              Registrar contacto
+            </h2>
+            <button
+              type="button"
+              class="btn-close btn btn-outline-info"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label"
+                  >Nombres (Obligatorio)</label
+                >
+                <input
+                  type="text"
+                  id="nombre"
+                  class="form-control"
+                  placeholder="Ej: Lionel Andrés"
+                  minlength="6"
+                  maxlength="45"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label"
+                  >Apellidos (Obligatorio)</label
+                >
+                <input
+                  type="text"
+                  id="apellido"
+                  class="form-control"
+                  placeholder="Ej: Messi Cuccittini"
+                  minlength="6"
+                  maxlength="45"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Email (Obligatorio)</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Ej: liomessi10@gmail.com"
+                  minlength="6"
+                  maxlength="320"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Contraseña (Obligatorio)</label
+                >
+                <input
+                  type="password"
+                  id="email"
+                  class="form-control"
+                  placeholder="Mínimo 8 caracteres"
+                  minlength="8"
+                  maxlength="20"
+                  required
+                />
+              </div>
+              <div class="mb-3 d-flex justify-content-center">
+                <button class="btn modal-registro btn-outline-primary text-white" type="submit">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="row-footer">
         <div class="col-footer cuadroPrimero">
