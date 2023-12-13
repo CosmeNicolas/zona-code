@@ -1,0 +1,49 @@
+/*! Página detalles */
+
+body {
+    background: linear-gradient(0deg, rgba(21,35,64,1) 11%, rgba(54,217,187,1) 58%, rgba(35,100,140,1) 100%);
+}
+
+.textoDescripcion {
+    text-align: justify;
+  }
+  
+  .inputCantidad {
+    width: 10%;
+    background-color: #6295d450;
+  }
+  
+  .btnCantidad {
+    background: none;
+    border: 2px solid #0e3361;
+    /* padding: 0 5px 3px 5px; */
+  }
+  
+  .btnAgregarAlCarrito {
+    background-color: #c96e67;
+  }
+  
+  .btnAgregarAlCarrito:hover,
+  .btnAgregarAlCarrito:active {
+    background-color: #729aea;
+  }
+  
+  .btnAgregarAListaDeDeseos {
+    border: 2px solid #ea8172;
+    color: #ea8172;
+  }
+  
+  .btnAgregarAListaDeDeseos:hover,
+  .btnAgregarAListaDeDeseos:active {
+    background: #729aea;
+    color: #f8f9fa;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .fondoAzul {
+      background-color: rgba(84, 137, 202, 0.817);
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+  }
+  
