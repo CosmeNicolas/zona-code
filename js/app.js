@@ -4,8 +4,8 @@ const mostrarModalOferta = new bootstrap.Modal(
 )
 
 
-const mostrarModal = ()=>{
+/* const mostrarModal = ()=>{
   mostrarModalOferta.show()
-}
+} */
 
 document.addEventListener('DOMContentLoaded', mostrarModal);
