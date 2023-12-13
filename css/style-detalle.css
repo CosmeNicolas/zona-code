@@ -6,6 +6,7 @@ body {
 
 .textoDescripcion {
     text-align: justify;
+    
   }
   
   .inputCantidad {
@@ -20,7 +21,7 @@ body {
   }
   
   .btnAgregarAlCarrito {
-    background-color: #c96e67;
+    background-color: #0e1445;
   }
   
   .btnAgregarAlCarrito:hover,
@@ -29,14 +30,19 @@ body {
   }
   
   .btnAgregarAListaDeDeseos {
-    border: 2px solid #ea8172;
-    color: #ea8172;
+    border: 2px solid #092866;
+    color: #160264;
   }
   
   .btnAgregarAListaDeDeseos:hover,
   .btnAgregarAListaDeDeseos:active {
     background: #729aea;
     color: #f8f9fa;
+  }
+
+  .textoDetalle{
+    font-family: 'Pixelify Sans',
+    sans-serif;
   }
   
   @media screen and (min-width: 768px) {
