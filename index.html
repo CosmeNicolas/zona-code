@@ -9,18 +9,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <!-- fuente -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Pixelify+Sans&family=Roboto&display=swap"
-    rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Maven+Pro:wght@800&family=Nunito+Sans:opsz@6..12&family=Pixelify+Sans&family=Roboto&display=swap" rel="stylesheet">
   <title>GameCode🎮</title>
 </head>
 
 
-<body>
+<body class="estilo-card-footer">
   <header>
-    <nav class="navbar navbar-expand-lg border-bottom border-body d-flex py-" data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg border-bottom border-body fixed-top" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand logo-nav" href="/index.html">
           <img class="logo-nav ms-3" src="/img/sinFondo-removebg-preview.png" alt="logo-GameCode" />
@@ -30,16 +28,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-lg-end me-3" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-lg-center me-3" id="navbarNav">
           <ul class="navbar-nav d-sm-flex  ">
             <li class="nav-item">
-              <a class="nav-link active text-decoration-underline" aria-current="page" href="/index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+              <a class="nav-link active text-decoration-underline" aria-current="page" href="/index.html"><i
+                  class="fa-solid fa-house"></i> Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="./pages/error404.html"><i class="fa-solid fa-gamepad"></i> Productos</a>
+              <a class="nav-link text-light" href="./pages/error404.html"><i class="fa-solid fa-gamepad"></i>
+                Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="./pages/Nosotros.html"><i class="fa-solid fa-user-group"></i> Nosotros</a>
+              <a class="nav-link text-light" href="./pages/Nosotros.html"><i class="fa-solid fa-user-group"></i>
+                Nosotros</a>
             </li>
             <li class="nav-item">
               <a href="./pages/error404.html" class="nav-link text-light" data-toggle="modal"
@@ -47,20 +48,21 @@
                 <i class="fa-solid fa-envelope"></i> Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="./pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+              <a class="nav-link text-light" href="./pages/login.html"><i class="fa-solid fa-right-to-bracket"></i>
+                Login</a>
             </li>
             <li>
               <a class="nav-link text-light disabled" aria-disabled="true"><i class="fa-solid fa-cart-shopping"></i></a>
             </li>
             <li>
-              <!-- Inicio-barraBuscar -->
+              
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 <button class="btn btn-outline-light" type="submit">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </form>
-              <!-- Fin Barra Buscar -->
+            
             </li>
           </ul>
         </div>
@@ -70,109 +72,132 @@
     </nav>
   </header>
   <main>
-    <!-- slider -->
-    
-      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/img/1.png" class="img-slider img-fluid w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="/img/2.png" class="img-slider img-fluid w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/img/3.png" class="img-slider img-fluid w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+    <!-- imagen responsive celulares  -->
+    <section class="img-responsive card container-fluid p-0 mt-5">
+      <img class="img-fluid card-img"  src="./img/imagen2.jpg" alt="" srcset="">
+      <div class="card-img-overlay d-flex flex-column justify-content-center">
+        <h3 class="text-center align-items-center mt-5 text-light titulo-responsive">ZonaCode🎮</h3>
+        <p class="text-center text-light display-3">Un Mundo de Tecnología</p>
       </div>
-   
-
-   <section class="fondo">
-    <div class="container">
-      <article class="row justify-content-center">
-        <h2 class="text-light text-center my-3 productos-tittulo">Productos Destacados</h2>
-        <!-- 1 -->
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-<div class="card h-100 ">
-  <img src="./img/joystick-sf.png" class="img-card-producto card-img-top p-4 " alt="filamento-ecofila">
-  <div class="card-body bg-dark text-light">
-    <h5 class="card-title">Consolas  🎮</h5>
-    <p class="card-text">Última tecnología, gráficos impresionantes y amplia selección de juegos. Sumérgete en la diversión y entretenimiento sin
-    límites.
-    </p>
-   
-  </div>
-  <div class="card-footer d-flex justify-content-center">
-    <a href="./pages/error404.html" class="btn btn-primary">Comprar</a>
-
-  </div>
-</div>
-        </div>
-        <!-- 2 -->
-
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 ">
-            <img src="./img/mouse-verde.png" class="img-card-producto card-img-top p-4" alt="filamento-ecofila">
-            <div class="card-body bg-dark text-light">
-              <h5 class="card-title">Mouse Gamer 🖱️</h5>
-              <p class="card-text">
-               Diseño ergonómico, alta precisión y botones programables. Mejora tu experiencia de juego.
-              </p>
-            </div>
-            <div class="card-footer d-flex justify-content-center">
-              <a href="./pages/error404.html" class="btn btn-primary">Comprar</a>
-        
-            </div>
-          </div>
-        </div>
-        <!-- 3 -->
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 ">
-            <img src="./img/silla-batman.png" class="img-card-producto card-img-top p-4" alt="filamento-ecofila">
-            <div class="card-body bg-dark text-light">
-              <h5 class="card-title">Sillas Gamer   <i class="fa-solid fa-gamepad"></i></h5>
-              <p class="card-text">Diseño ergonómico, comodidad excepcional y ajustes personalizables. Mejora tu postura y disfruta de largas sesiones de
-              juego sin molestias.
-              </p>
-            </div>
-            <div class="card-footer d-flex justify-content-center">
-              <a href="./pages/error404.html" class="btn btn-primary">Comprar</a>
-        
-            </div>
-          </div>
-        </div>
-        <!-- 4 -->
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 ">
-            <img src="./img/teclado-luminoso.png" class="img-card-producto card-img-top p-4" alt="filamento-ecofila">
-            <div class="card-body bg-dark text-light">
-              <h5 class="card-title">Teclado gamer ⌨️</h5>
-              <p class="card-text">SRetroiluminación personalizable, teclas programables y respuesta rápida. Potencia tus habilidades de juego y domina el
-              campo de batalla.
-              </p>
-            </div>
-            <div class="card-footer d-flex justify-content-center">
-              <a href="./pages/error404.html" class="btn btn-primary">Comprar</a>
-        
-            </div>
-          </div>
-        </div>
-
-      </article>
-
+    </section>
+    <!-- slider -->
+  <section id="carouselProductosPrincipales" class="slider carousel slide">
+    <!-- Estos botones son las rallitas -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselProductosPrincipales" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselProductosPrincipales" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselProductosPrincipales" data-bs-slide-to="2"
+        aria-label="Slide 3">
+      </button>
+     
     </div>
+    <!-- estas son las imagenes -->
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <img src="./img/1.png" class="d-block w-100 imgProductosCarousel" alt="filamento ecofilas">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/2.png" class="d-block w-100 imgProductosCarousel" alt="filamento de colores">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/3.png" class="d-block w-100 imgProductosCarousel" alt="filamento de colores">
+      </div>
+    </div>
+    <!-- botones atras y adelante  -->
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductosPrincipales"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselProductosPrincipales"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
 
-   </section>
+    <section class="fondo">
+      <div class="container">
+        <article class="row justify-content-center">
+          <h2 class="text-light text-center my-3 productos-tittulo">Productos Destacados</h2>
+          <!-- 1 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 ">
+              <img src="./img/ps5-2.jpg" class="img-card-producto card-img-top " alt="filamento-ecofila">
+              <div class="card-body estilo-card-body text-light">
+                <h5 class="card-title text-center">PS5 🎮</h5>
+                <p class="card-text">
+                La PS5 es la última consola de Sony con gráficos avanzados, tiempos de carga rápidos y un amplio catálogo de juegos
+                exclusivos.
+                </p>
+
+              </div>
+              <div class="card-footer estilo-card-footer d-flex justify-content-center">
+                <a href="./pages/error404.html" class="btn estilo-card-body btn-primary">Ver mas</a>
+
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 ">
+              <img src="./img/mouse-teclado.jpg" class="img-card-producto card-img-top " alt="filamento-ecofila">
+              <div class="card-body estilo-card-body text-light">
+                <h5 class="card-title">Combo Mouse - Teclado 🖱️</h5>
+                <p class="card-text">
+                  Diseño ergonómico, alta precisión y botones programables. Mejora tu experiencia de juego.
+                </p>
+              </div>
+              <div class="card-footer estilo-card-footer d-flex justify-content-center">
+                <a href="./pages/error404.html" class="btn estilo-card-body btn-primary">Ver mas</a>
+
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 ">
+              <img src="./img/Silla-fondonegro.png" class="img-card-producto card-img-top" alt="filamento-ecofila">
+              <div class="card-body estilo-card-body text-light">
+                <h5 class="card-title">Sillas Gamer <i class="fa-solid fa-gamepad"></i></h5>
+                <p class="card-text">Diseño ergonómico, comodidad excepcional y ajustes personalizables. Mejora tu
+                  postura y disfruta de largas sesiones de
+                  juego sin molestias.
+                </p>
+              </div>
+              <div class="card-footer estilo-card-footer d-flex justify-content-center">
+                <a href="./pages/error404.html" class="btn estilo-card-body btn-primary">Ver mas</a>
+
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 ">
+              <img src="./img/pc-gamer.jpg" class="img-card-producto card-img-top " alt="filamento-ecofila">
+              <div class="card-body estilo-card-body text-light">
+                <h5 class="card-title">Combo Pc Gamer </h5>
+                <p class="card-text">SRetroiluminación personalizable, teclas programables y respuesta rápida. Potencia
+                  tus habilidades de juego y domina el
+                  campo de batalla.
+                </p>
+              </div>
+              <div class="card-footer estilo-card-footer d-flex justify-content-center">
+                <a href="./pages/error404.html" class="btn estilo-card-body btn-primary">Ver mas</a>
+
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
 
 
   </main>
@@ -230,7 +255,10 @@
         </div>
       </div>
 
-    
+      <!-- Button trigger modal -->
+      <!--   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mostrarOferta">
+        Boton Modal
+      </button> -->
 
       <!-- Modal -->
       <div class="modal fade" id="mostrarOferta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -246,14 +274,12 @@
       </div>
     </div>
   </footer>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-  crossorigin="anonymous"></script>
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/d4c1aecd9b.js" crossorigin="anonymous"></script>
   <script src="/js/app.js" type="module"></script>
 </body>
 
 </html>
-
-
