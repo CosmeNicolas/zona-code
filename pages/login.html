@@ -30,7 +30,7 @@
   <body class="bodyLogin">
     <header>
       <nav
-        class="navbar navbar-expand-lg border-bottom border-body d-flex py-3"
+        class="navbar navbar-expand-lg border-bottom border-body fixed-top"
         data-bs-theme="dark"
       >
         <div class="container-fluid">
@@ -54,40 +54,36 @@
           </button>
 
           <div
-            class="collapse navbar-collapse justify-content-lg-end me-3"
+            class="collapse navbar-collapse justify-content-lg-center me-3"
             id="navbarNav"
           >
-            <ul class="navbar-nav">
+            <ul class="navbar-nav d-sm-flex">
               <li class="nav-item">
                 <a
-                  class="nav-link text-light"
+                  class="nav-link active text-decoration-underline"
                   aria-current="page"
                   href="/index.html"
-                  >Inicio</a
+                  ><i class="fa-solid fa-house"></i> Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="./Nosotros.html"
-                  >Nosotros</a
+                <a class="nav-link text-light" href="./pages/error404.html"
+                  ><i class="fa-solid fa-gamepad"></i> Productos</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link text-light"
-                  id="abrirModalContacto"
-                  href="#"
+                <a class="nav-link text-light" href="./pages/Nosotros.html"
+                  ><i class="fa-solid fa-user-group"></i> Nosotros</a
                 >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" id="abrirModalContacto" href="#">
                   Contacto
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link text-light active text-decoration-underline"
-                  href="./login.html"
-                  >Login</a
+                <a class="nav-link text-light" href="./pages/login.html"
+                  ><i class="fa-solid fa-right-to-bracket"></i> Login</a
                 >
               </li>
               <li>
@@ -96,7 +92,6 @@
                 ></a>
               </li>
               <li>
-                <!-- Inicio-barraBuscar -->
                 <form class="d-flex" role="search">
                   <input
                     class="form-control me-2"
@@ -108,15 +103,14 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </form>
-                <!-- Fin Barra Buscar -->
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main class="mt-md-4 mt-lg-1">
-      <div class="container">
+    <main class="mt-md-4 mt-lg-1 pt-5">
+      <div class="container pt-4">
         <div class="row mt-3">
           <div class="col-sm-12 col-md-6">
             <div class="container text-light">
