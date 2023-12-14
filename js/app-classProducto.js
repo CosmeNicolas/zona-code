@@ -1,4 +1,4 @@
-export default class Contacto {
+export default class Producto {
     #id;
     #nombre;
     #precio;

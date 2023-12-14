@@ -1,3 +1,6 @@
+import Producto from "./app-classProducto.js";
+
+
 const modalAdminProducto = new bootstrap.Modal(
   document.getElementById("administrarProducto")
 );
