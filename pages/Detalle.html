@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Pixelify+Sans&family=Roboto&display=swap"
+    rel="stylesheet">
+  <title>GameCode🎮</title>
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style-detalle.css">
+  
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg border-bottom border-body d-flex  py-" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand logo-nav" href="/index.html">
+          <img class="logo-nav ms-3" src="/img/sinFondo-removebg-preview.png" alt="logo-GameCode">
+        </a>
+        <button class="boton-navbar navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+       
+        <div class="collapse navbar-collapse justify-content-lg-end me-3" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class=" nav-link text-light" aria-current="page" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active text-decoration-underline text-light" href="#">Productos</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-light" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-light disabled" aria-disabled="true">Contacto</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-light disabled" aria-disabled="true">Login</a>
+            </li>
+            <li>
+              <a class="nav-link text-light disabled" aria-disabled="true"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li>
+              <!-- Inicio-barraBuscar -->
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+              <!-- Fin Barra Buscar -->
+            </li>
+          </ul>
+        </div>
+      </div>
+     
+    </nav>
+  </header>
+
+  <main class="container ">
+    <section class="row my-2">
+      <!-- Contenedor imágen del producto -->
+      <div class="col-6 d-flex align-items-center">
+
+        <section class="wrapper">
+          <img id="mainPhoto" src="../img/silla-azul.png" alt="img">
+          <div class="image-wrapper">
+            <img class="imgCarousel" src="../img/COMBO GAMER.jpg" alt="img1">
+            <img class="imgCarousel" src="../img/ps5-2.jpg" alt="img2">
+            <img class="imgCarousel" src="../img/silla-batman.png" alt="img3">
+            <img class="imgCarousel" src="../img/teclado-frog.png" alt="img4">
+          </div>
+        </section>
+        
+      </div>
+
+      <div class="col-6 ">
+
+        <p class="text-center text-uppercase col-4 my-3 ">
+          Código: lp-1502564
+        </p> 
+
+        <h2 class="text-center text-lg-start textoDetalle">
+          Combo Teclado - Mouse Mecanico
+        </h2>
+
+        <button
+          class="btn col-4 text-light rounded-5 mt-2 bg-primary"
+          type="button"
+        >
+          $11111
+        </button>
+
+        <h2 class="col-12 mt-4 text-center textoDetalle">
+          Caracteristicas
+        </h2>
+
+        <p class="col-12 tx-parrafo lh-lg textoDescripcion">
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis!</li>
+          </ul>
+         </p>
+
+         <div class="d-flex justify-content-center align-items-center">
+          <p class="mb-0 me-5 fs-4">Cantidad:</p>
+          <button
+            type="button"
+            class="fs-3 lh-1 rounded-2 px-2 pb-1 btnCantidad"
+            onclick="decrementarCantidad()"
+          >
+            -
+          </button>
+          <input
+          id="inputCantidad"
+            class="border-0 rounded-2 text-center mx-4 px-2 py-2 inputCantidad text-light"
+            value="1"
+            oninput="actualizarStockDisponible()"
+          />
+          <button
+            type="button"
+            class="fs-3 lh-1 rounded-2 px-1 pb-1 btnCantidad"
+            onclick="incrementarCantidad()"
+          >
+            +
+          </button>
+        </div>
+
+        <p id="stockDisponible" class="col-12 my-3 text-center">
+          (85 Disponibles)
+        </p>
+        <div
+          class="col-9 d-flex flex-column flex-lg-row align-items-lg-center mx-auto"
+        >
+          <button
+            class="btn w-100 my-3 mx-2 text-light btnAgregarAlCarrito "
+          >
+            Agregar al Carrito
+          </button>
+          <button class="btn w-100  btnAgregarAListaDeDeseos">
+           Lista de Deseados
+          </button>
+        </div>
+      </div>
+  
+  </main>
+  
+  <footer class="">
+    <div class="row-footer">
+   <div class="col-footer cuadroPrimero">
+          <img src="/img/sinFondo-removebg-preview.png" class="logo-footer ">
+          <p>Explora el épico universo gamer con estilo en GamerCode, tu destino para productos exclusivos. Eleva tu experiencia de juego con nuestra selección única. ¡Únete a la revolución gamer ahora!</p>
+        </div>
+   <div class="col-footer">
+    <h3>Oficinas</h3>
+    <p>San Lorenzo 723</p>
+    <p>San miguel de Tucuman</p>
+    <p>Tucumán CP 4000</p>
+    
+    <p class="email-id">gamercode@gmail.com</p>
+    <h4>+54 381 59812</h4>
+   </div>
+   <div class="col-footer ">
+    <h3 class="">Links</h3>
+    <ul>
+      <li> <a href="">Inicio</a></li>
+      <li> <a href="">Producos</a></li>
+      <li> <a href="">Nosotros</a></li>
+      <li> <a href="">Contacto</a></li>
+      <li> <a href="">Extra!</a></li>
+    </ul>
+   </div>
+   <div class="col-footer">
+    <h3>Boletin de Noticias</h3>
+    <form>
+      <i class="fa-regular fa-envelope me-3"></i> 
+      <input type="email" placeholder="Ingrese su email" required>
+      <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+     
+  </form>
+  <div class="social-icons-footer">
+    <a href="#" style="--color: #0072b1">
+     <i class="fa-brands fa-twitter"> </i>
+   </a> 
+   <a href="#" style="--color: #e1306c">
+     <i class="fa-brands fa-instagram"> </i>
+   </a> 
+   <a href="#" style="--color: #4267B2">
+     <i class="fa-brands fa-facebook-f"> </i>
+   </a> 
+   <a href="#" style="--color: #ff0050">
+     <i class="fa-brands fa-github"> </i>
+   </a> 
+  
+   </div>
+   </div>
+ 
+  </footer>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d4c1aecd9b.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../js/Detalle.js"></script>
+</body>
+
+</html>
