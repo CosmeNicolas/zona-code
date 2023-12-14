@@ -50,6 +50,10 @@ nav {
   background: linear-gradient(0deg, rgba(2, 8, 15, 1) 0%, #1f3565 58%, #0d1320 100%);
 }
 
+.fondo-admin{
+  background: linear-gradient(0deg, rgba(2, 8, 15, 1) 0%, #1f5765 58%, #0d1320 100%);
+}
+
 /* productos */
 .productos-tittulo{
   font-family: 'Pixelify Sans',

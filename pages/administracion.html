@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/style-Nosotros.css" />
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
     <title>GameCode🎮</title>
   </head>
 
-  <body>
+  <body class="fondo-admin">
     <header>
       <nav
         class="navbar navbar-expand-lg border-bottom border-body d-flex py-"
@@ -78,13 +78,13 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link text-light "
+                  class="nav-link text-light"
                   href="../pages/login.html"
                   >Login</a
                 >
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item text-light">
                 <a class="nav-link text-light " href="/index.html">ADMIN</a>
                 >
               </li>
@@ -116,32 +116,96 @@
     <main class="container my-4">
      
       <div class="d-flex align-items-center justify-content-between">
-        <h1>Lista Productos</h1>
+        <h1 class="text-light">Lista Productos</h1>
         <button class="btn btn-primary" id="btnNuevoContacto">Nuevo Producto</button>
       </div>
-      <hr>
+      <hr class="text-light">
    <section class="container text-center">
     <div class="row">
       <!-- producto detalles -->
-      <div class="col-12 col-md-4 col-lg-4">
+      <div class="col-12 col-md-3 col-lg-3 my-3">
         <div class="card" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="...">
+          <img src="/img/teclado-frog.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-          <button class="btn btn-dark">Detalle</button>
-          <button class="btn btn-warning">Editar</button>
-          <button class="btn btn-danger">Borrar</button>
+            <h5 class="card-title">Teclado</h5>
+            <ul class="list-group list-group-flush text-start">
+              <li class="list-group-item">ID: numero</li>
+              <li class="list-group-item">nombre: teclado</li>
+              <li class="list-group-item">precio</li>
+              <li class="list-group-item">cetegoria: perifericos</li>
+              <li class="list-group-item">descripcion: teclado mecanico</li>
+              <li class="list-group-item">stock: 1</li>
+              <div class="text-center">
+                <button class="btn btn-dark">Detalle</button>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger">Borrar</button>
+              </div>
           </div>
         </div>
       </div>
 <!-- producto detalles -->
-     <!--  <div class="col-12 col-md-4 col-lg-4">
-        col
-      </div> -->
+    <div class="col-12 col-md-3 col-lg-3 my-3">
+      <div class="card" style="width: 18rem;">
+        <img src="/img/teclado-frog.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Teclado</h5>
+          <ul class="list-group list-group-flush text-start">
+            <li class="list-group-item">ID: numero</li>
+            <li class="list-group-item">nombre: teclado</li>
+            <li class="list-group-item">precio</li>
+            <li class="list-group-item">cetegoria: perifericos</li>
+            <li class="list-group-item">descripcion: teclado mecanico</li>
+            <li class="list-group-item">stock: 1</li>
+            <div class="text-center">
+              <button class="btn btn-dark">Detalle</button>
+              <button class="btn btn-warning">Editar</button>
+              <button class="btn btn-danger">Borrar</button>
+            </div>
+        </div>
+      </div>
+    </div>
 <!-- producto detalles -->
-    <!--   <div class="col-12 col-md-4 col-lg-4">
-        col
-      </div> -->
+    <div class="col-12 col-md-3 col-lg-3 my-3">
+      <div class="card" style="width: 18rem;">
+        <img src="/img/teclado-frog.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Teclado</h5>
+          <ul class="list-group list-group-flush text-start">
+            <li class="list-group-item">ID: numero</li>
+            <li class="list-group-item">nombre: teclado</li>
+            <li class="list-group-item">precio</li>
+            <li class="list-group-item">cetegoria: perifericos</li>
+            <li class="list-group-item">descripcion: teclado mecanico</li>
+            <li class="list-group-item">stock: 1</li>
+            <div class="text-center">
+              <button class="btn btn-dark">Detalle</button>
+              <button class="btn btn-warning">Editar</button>
+              <button class="btn btn-danger">Borrar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+<!-- producto maquetado -->
+<div class="col-12 col-md-3 col-lg-3 my-3">
+  <div class="card" style="width: 18rem;">
+    <img src="/img/teclado-frog.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Teclado</h5>
+      <ul class="list-group list-group-flush text-start">
+        <li class="list-group-item">ID: numero</li>
+        <li class="list-group-item">nombre: teclado</li>
+        <li class="list-group-item">precio</li>
+        <li class="list-group-item">cetegoria: perifericos</li>
+        <li class="list-group-item">descripcion: teclado mecanico</li>
+        <li class="list-group-item">stock: 1</li>
+        <div class="text-center">
+          <button class="btn btn-dark">Detalle</button>
+          <button class="btn btn-warning">Editar</button>
+          <button class="btn btn-danger">Borrar</button>
+        </div>
+    </div>
+  </div>
+</div>
 
     </div>
    </section>
