@@ -77,9 +77,8 @@
               <li class="nav-item">
                 <a
                   class="nav-link text-light"
-                  data-bs-toggle="modal"
-                  data-bs-target="#contactoModal"
-                  href="./contactoModal.html"
+                  id="abrirModalContacto"
+                  href="#"
                 >
                   Contacto
                 </a>
@@ -281,7 +280,9 @@
                   </form>
                 </div>
                 <div class="col-md-6">
-                  <p class="d-flex justify-content-center modalTexto text-light">
+                  <p
+                    class="d-flex justify-content-center modalTexto text-light"
+                  >
                     Encuentranos Aquí
                   </p>
                   <iframe
@@ -293,7 +294,9 @@
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                   ></iframe>
-                  <p class="d-flex justify-content-center modalTexto m-2 text-light">
+                  <p
+                    class="d-flex justify-content-center modalTexto m-2 text-light"
+                  >
                     Nuestras Redes
                   </p>
                   <div class="d-flex justify-content-center">
@@ -330,7 +333,7 @@
         <div class="modal-content bg-info">
           <div class="modal-header modal-registro">
             <h2
-              class="modal-title fs-5 text-center mx-auto me-3 text-white" 
+              class="modal-title fs-5 text-center mx-auto me-3 text-white"
               id="registrarContactoLabel"
             >
               Registrar contacto
@@ -401,7 +404,12 @@
                 />
               </div>
               <div class="mb-3 d-flex justify-content-center">
-                <button class="btn modal-registro btn-outline-primary text-white" type="submit">Registrar</button>
+                <button
+                  class="btn modal-registro btn-outline-primary text-white"
+                  type="submit"
+                >
+                  Registrar
+                </button>
               </div>
             </form>
           </div>
@@ -473,5 +481,6 @@
       src="https://kit.fontawesome.com/d4c1aecd9b.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/modalContacto.js" type="module"></script>
   </body>
 </html>
