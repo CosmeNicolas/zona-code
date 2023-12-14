@@ -15,11 +15,13 @@ images.forEach(function(image){
 
 
 // BOTON DE CANTIDAD
+var stockInicial = 85;
 
-function incrementarCantidad() {
+  function incrementarCantidad() {
     let inputCantidad = document.getElementById("inputCantidad");
     let cantidad = parseInt(inputCantidad.value, 10) || 0;
     inputCantidad.value = cantidad + 1;
+    actualizarStockDisponible();
   }
 
   function decrementarCantidad() {
@@ -27,5 +29,16 @@ function incrementarCantidad() {
     let cantidad = parseInt(inputCantidad.value, 10) || 0;
     if (cantidad > 1) {
       inputCantidad.value = cantidad - 1;
+      actualizarStockDisponible();
     }
+  }
+
+  function actualizarStockDisponible() {
+    let inputCantidad = document.getElementById("inputCantidad");
+    let stockDisponible = document.getElementById("stockDisponible");
+
+    let cantidadSeleccionada = parseInt(inputCantidad.value, 10) || 0;
+    let nuevoStock = stockInicial - cantidadSeleccionada;
+
+    stockDisponible.textContent = "(" + nuevoStock + " Disponibles)";
   }

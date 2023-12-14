@@ -127,6 +127,7 @@
           id="inputCantidad"
             class="border-0 rounded-2 text-center mx-4 px-2 py-2 inputCantidad text-light"
             value="1"
+            oninput="actualizarStockDisponible()"
           />
           <button
             type="button"
@@ -137,7 +138,7 @@
           </button>
         </div>
 
-        <p class="col-12 my-3 text-center">
+        <p id="stockDisponible" class="col-12 my-3 text-center">
           (85 Disponibles)
         </p>
         <div
