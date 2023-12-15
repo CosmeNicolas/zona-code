@@ -104,6 +104,14 @@ window.borrarProducto = (idProducto) => {
       const tablaProductos = document.querySelector("tbody");     
       tablaProductos.removeChild(
       tablaProductos.children[posicionProductoBuscado]);
+      
+
+      Swal.fire({
+        title: "Contacto eliminado",
+        text: "El contacto fue eliminado exitosamente",
+        icon: "success",
+
+      });
     }
   });
 };
