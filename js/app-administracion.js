@@ -81,6 +81,8 @@ function cargaInicial() {
   }
 }
 
+window.borrarProducto = (idProducto) => {}
+
 btnAgregarProducto.addEventListener("click", mostrarModal);
 formularioProducto.addEventListener("submit", crearProducto);
 
