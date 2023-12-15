@@ -119,13 +119,18 @@ function cargaInicial() {
       productoEditado.stock = stock.value;
 
       guardarEnLocalstorage();
+      //mostrar editado exitoso
+      Swal.fire({
+        title: "Contacto editado",
+        text: `El contacto ${productoEditado.nombre} ha sido actualizado correctamente`,
+        icon: "success",
+      });
       //ocultar el modal luego de editar y guardar en el localSotrage
       modalAdminProducto.hide()
 
     })
     mostrarModal()
   }
-
 cambiarBoton()
  }
 
