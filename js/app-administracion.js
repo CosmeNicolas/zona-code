@@ -88,7 +88,17 @@ function cargaInicial() {
  window.editarProducto = (idProducto) => {
   const posicionProductoEditar = inventario.findIndex((itemProducto)=> itemProducto.id === idProducto)
   console.log(posicionProductoEditar)
+  //mostrar los datos del producto a editar a traves del modal
+
+  const mostrarDatosProductoAeditar = () =>{
+    const productoAeditar = inventario[posicionProductoEditar]
+    console.log(productoAeditar)
+  }
+  mostrarDatosProductoAeditar()
  }
+
+
+
 
 btnAgregarProducto.addEventListener("click", mostrarModal);
 formularioProducto.addEventListener("submit", crearProducto);
