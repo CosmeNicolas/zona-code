@@ -15,6 +15,7 @@ const id = document.getElementById("id"),
   stock = document.getElementById("stock");
 const inventario = JSON.parse(localStorage.getItem("inventarioKey")) || [];
 
+/* console.log(inventario) */
 const mostrarModal = () => {
   limpiarFormulario();
   modalAdminProducto.show();
@@ -67,11 +68,13 @@ function crearFila(producto, fila) {
     <td>${producto.stock}</td>
     <td>
     <button class="btn btn-primary" onclick="verDetalleProducto('${producto.id}')">Detalle</button>
-      <button class="btn btn-warning me-1">Editar</button
-      ><button class="btn btn-danger" onclick="borrarProducto('${producto.id}')">Borrar</button>
+      <button class="btn btn-warning me-1" onclick="editarProducto('${producto.id}')">Editar
+      </button>
+      <button class="btn btn-danger" onclick="borrarProducto('${producto.id}')">Borrar</button>
     </td>
   </tr>`;
 }
+
 
 function cargaInicial() {
   if (inventario.length > 0) {
@@ -80,6 +83,12 @@ function cargaInicial() {
     );
   }
 }
+
+//EDITAR Producto - arreglo "inventario"
+ window.editarProducto = (idProducto) => {
+  const posicionProductoEditar = inventario.findIndex((itemProducto)=> itemProducto.id === idProducto)
+  console.log(posicionProductoEditar)
+ }
 
 btnAgregarProducto.addEventListener("click", mostrarModal);
 formularioProducto.addEventListener("submit", crearProducto);
