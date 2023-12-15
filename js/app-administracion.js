@@ -17,7 +17,7 @@ const inventario = JSON.parse(localStorage.getItem("inventarioKey")) || [];
 
 /* console.log(inventario) */
 const mostrarModal = () => {
- /*  limpiarFormulario(); */
+  /*  limpiarFormulario(); */
   modalAdminProducto.show();
 };
 
@@ -85,12 +85,12 @@ function cargaInicial() {
 }
 
 //EDITAR Producto - arreglo "inventario"
- window.editarProducto = (idProducto) => {
-  const posicionProductoEditar = inventario.findIndex((itemProducto)=> itemProducto.id === idProducto)
+window.editarProducto = (idProducto) => {
+  const posicionProductoEditar = inventario.findIndex((itemProducto) => itemProducto.id === idProducto)
   console.log(posicionProductoEditar)
   //mostrar los datos del producto a editar a traves del modal
 
-  const mostrarDatosProductoAeditar = () =>{
+  const mostrarDatosProductoAeditar = () => {
     const productoAeditar = inventario[posicionProductoEditar]
     console.log(productoAeditar)
     nombre.value = productoAeditar.nombre;
@@ -108,7 +108,7 @@ function cargaInicial() {
     botonEditar.innerText = "Guardar";
     botonEditar.type = "button";
     botonEditar.removeEventListener("click", cambiarBoton)
-    botonEditar.addEventListener("click", function(e){
+    botonEditar.addEventListener("click", function (e) {
       e.preventDefault();
       const productoEditado = inventario[posicionProductoEditar];
       productoEditado.nombre = nombre.value;
@@ -121,23 +121,32 @@ function cargaInicial() {
       guardarEnLocalstorage();
       //mostrar editado exitoso
       Swal.fire({
-        title: "Contacto editado",
-        text: `El contacto ${productoEditado.nombre} ha sido actualizado correctamente`,
+        position: "top-center",
         icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
       });
+
+      window.setTimeout(() => {
+        window.location.reload();
+      }, 1500);
       //ocultar el modal luego de editar y guardar en el localSotrage
       modalAdminProducto.hide()
 
     })
     mostrarModal()
   }
-cambiarBoton()
- }
+
+  cambiarBoton()
+}
 
 
+btnAgregarProducto.addEventListener("click", () => {
+  limpiarFormulario(); // Limpia el formulario al hacer clic en "Nuevo Producto"
+  mostrarModal();
+});
 
-
-btnAgregarProducto.addEventListener("click", mostrarModal);
 formularioProducto.addEventListener("submit", crearProducto);
 
 cargaInicial();
