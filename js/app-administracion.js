@@ -119,6 +119,9 @@ function cargaInicial() {
       productoEditado.stock = stock.value;
 
       guardarEnLocalstorage();
+      //ocultar el modal luego de editar y guardar en el localSotrage
+      modalAdminProducto.hide()
+
     })
     mostrarModal()
   }
