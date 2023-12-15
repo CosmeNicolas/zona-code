@@ -91,8 +91,22 @@ window.borrarProducto = (idProducto) => {
     cancelButtonColor: "#d33",
     confirmButtonText: "Borrar",
     cancelButtonText: "Cancelar",
-  })
-}
+  }).then((result) => {
+    if (result.isConfirmed) {
+           
+      const posicionProductoBuscado = inventario.findIndex(
+        (itemProducto) => itemProducto.id === idProducto
+      );
+       
+      inventario.splice(posicionProductoBuscado, 1);     
+      guardarEnLocalstorage();
+      
+      const tablaProductos = document.querySelector("tbody");     
+      tablaProductos.removeChild(
+      tablaProductos.children[posicionProductoBuscado]);
+    }
+  });
+};
 
 btnAgregarProducto.addEventListener("click", mostrarModal);
 formularioProducto.addEventListener("submit", crearProducto);
