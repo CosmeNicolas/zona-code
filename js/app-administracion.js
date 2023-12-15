@@ -42,8 +42,10 @@ const crearProducto = (e) => {
   crearFila(nuevoProducto, inventario.length);
   modalAdminProducto.hide();
   Swal.fire({
-    title: "Prodcuto creado",
-    text: `El Producto ${nuevoProducto.nombre} fue creado correctamente`,
+    iconColor: "#36D9BB",
+    background: "#274481",
+    title: "<h4 style='color:#fff'>" + `Producto Creado` + "</h4>",
+    html: `<p style='color:white'>El Producto ${nuevoProducto.nombre} fue creado correctamente</p>`,
     icon: "success",
   });
 };
