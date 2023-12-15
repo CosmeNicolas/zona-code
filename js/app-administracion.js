@@ -134,6 +134,40 @@ function cargaInicial() {
 cambiarBoton()
  }
 
+window.borrarProducto = (idProducto) => {
+  Swal.fire({
+    title: "¿Estas seguro que quieres borrar?",
+    text: "No puedes revertir este paso",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Borrar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+           
+      const posicionProductoBuscado = inventario.findIndex(
+        (itemProducto) => itemProducto.id === idProducto
+      );
+       
+      inventario.splice(posicionProductoBuscado, 1);     
+      guardarEnLocalstorage();
+      
+      const tablaProductos = document.querySelector("tbody");     
+      tablaProductos.removeChild(
+      tablaProductos.children[posicionProductoBuscado]);
+      
+
+      Swal.fire({
+        title: "Contacto eliminado",
+        text: "El contacto fue eliminado exitosamente",
+        icon: "success",
+
+      });
+    }
+  });
+};
 
 
 
