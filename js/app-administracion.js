@@ -123,7 +123,9 @@ window.editarProducto = (idProducto) => {
       Swal.fire({
         position: "top-center",
         icon: "success",
-        title: "Your work has been saved",
+        iconColor: "#36D9BB",
+        title: "<h4 style='color:#fff'>" + `Producto Editado Con Exito` + "</h4>",
+        background: "#274481",
         showConfirmButton: false,
         timer: 1500
       });
