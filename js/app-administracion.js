@@ -17,7 +17,7 @@ const inventario = JSON.parse(localStorage.getItem("inventarioKey")) || [];
 
 /* console.log(inventario) */
 const mostrarModal = () => {
-  limpiarFormulario();
+ /*  limpiarFormulario(); */
   modalAdminProducto.show();
 };
 
@@ -93,8 +93,25 @@ function cargaInicial() {
   const mostrarDatosProductoAeditar = () =>{
     const productoAeditar = inventario[posicionProductoEditar]
     console.log(productoAeditar)
+    nombre.value = productoAeditar.nombre;
+    precio.value = productoAeditar.precio;
+    categoria.value = productoAeditar.categoria;
+    imagen.value = productoAeditar.imagen;
+    descripcion.value = productoAeditar.descripcion;
+    stock.value = productoAeditar.stock;
   }
   mostrarDatosProductoAeditar()
+  //cambiar el boton de agregar > Editar
+
+  const cambiarBoton = () => {
+    const botonEditar = document.getElementById('btnEditarContacto');
+    botonEditar.innerText = "Guardar";
+    botonEditar.type = "button";
+    botonEditar.removeEventListener("click",cambiarBoton)
+  }
+
+
+ mostrarModal()
  }
 
 
