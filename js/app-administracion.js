@@ -107,11 +107,23 @@ function cargaInicial() {
     const botonEditar = document.getElementById('btnEditarContacto');
     botonEditar.innerText = "Guardar";
     botonEditar.type = "button";
-    botonEditar.removeEventListener("click",cambiarBoton)
+    botonEditar.removeEventListener("click", cambiarBoton)
+    botonEditar.addEventListener("click", function(e){
+      e.preventDefault();
+      const productoEditado = inventario[posicionProductoEditar];
+      productoEditado.nombre = nombre.value;
+      productoEditado.precio = precio.value;
+      productoEditado.categoria = categoria.value;
+      productoEditado.imagen = imagen.value;
+      productoEditado.descripcion = descripcion.value;
+      productoEditado.stock = stock.value;
+
+      guardarEnLocalstorage();
+    })
+    mostrarModal()
   }
 
-
- mostrarModal()
+cambiarBoton()
  }
 
 
