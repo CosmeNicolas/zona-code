@@ -81,7 +81,18 @@ function cargaInicial() {
   }
 }
 
-window.borrarProducto = (idProducto) => {}
+window.borrarProducto = (idProducto) => {
+  Swal.fire({
+    title: "¿Estas seguro que quieres borrar?",
+    text: "No puedes revertir este paso",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Borrar",
+    cancelButtonText: "Cancelar",
+  })
+}
 
 btnAgregarProducto.addEventListener("click", mostrarModal);
 formularioProducto.addEventListener("submit", crearProducto);
