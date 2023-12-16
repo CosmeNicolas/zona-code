@@ -1,11 +1,11 @@
-export default class Usuario{
+export default class Usuario {
   #id;
   #nombre;
   #apellido;
   #email;
   #contraseña;
 
-  constructor(id = crypto.randomUUID() , nombre, apellido, email, contraseña) {
+  constructor(id = crypto.randomUUID(), nombre, apellido, email, contraseña) {
     this.#id = id;
     this.#nombre = nombre;
     this.#apellido = apellido;
@@ -42,12 +42,12 @@ export default class Usuario{
   }
 
   get contraseña() {
-     return this.#contraseña;
+    return this.#contraseña;
   }
-  
+
   set contraseña(nuevaContraseña) {
     this.#contraseña = nuevaContraseñaontraseña;
-    }
+  }
 
   toJSON() {
     return {
@@ -59,5 +59,3 @@ export default class Usuario{
     };
   }
 }
-
-
