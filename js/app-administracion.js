@@ -20,11 +20,17 @@ const mostrarModal = () => {
   /*  limpiarFormulario(); */
   modalAdminProducto.show();
 };
+const validarUrlImagen = (url) => {
+  // Patrón regex para validar una URL de imagen básica
+  const regex = /\.(gif|jpg|jpeg|tiff|png)$/i;
+  return regex.test(url);};
 
 const crearProducto = (e) => {
   e.preventDefault();
-  console.log("aqui debo crear el producto nuevo");
-  if (validarCantidadCaracteres(nombre.value, 2, 20) && validarCantidadCaracteres(categoria.value, 2, 20) && validarCantidadCaracteres(descripcion.value, 5, 25)) {
+  
+  const urlImagenValida = validarUrlImagen(imagen.value);
+  if (validarCantidadCaracteres(nombre.value, 2, 20) && validarCantidadCaracteres(categoria.value, 2, 20) && validarCantidadCaracteres(descripcion.value, 5, 25) &&
+    urlImagenValida) {
   const nuevoProducto = new Producto(
     undefined,
     nombre.value,
