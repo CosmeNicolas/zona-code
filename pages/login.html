@@ -168,7 +168,7 @@
                     <button
                       class="btn btn-info"
                       data-bs-toggle="modal"
-                      data-bs-target="#registrarContacto"
+                      data-bs-target="#registrarUsuario"
                     >
                       Registrate
                     </button> </span
@@ -217,9 +217,9 @@
           role="document"
         >
           <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title text-dark" id="contactModalLabel">
-                Comunicate con nosotros!!
+            <div class="modal-header bg-info">
+              <h4 class="modal-title text-primary text-center mx-auto me-3" id="contactModalLabel">
+                ¡Comunicate con nosotros!
               </h4>
               <button
                 type="button"
@@ -318,9 +318,9 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="registrarContacto"
+      id="registrarUsuario"
       tabindex="-1"
-      aria-labelledby="registrarContactoLabel"
+      aria-labelledby="registrarUsuarioLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
@@ -328,7 +328,7 @@
           <div class="modal-header modal-registro">
             <h2
               class="modal-title fs-5 text-center mx-auto me-3 text-white"
-              id="registrarContactoLabel"
+              id="registrarUsuarioLabel"
             >
               Registrar contacto
             </h2>
@@ -340,17 +340,17 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="formularioUsuario">
               <div class="mb-3">
                 <label for="nombre" class="form-label"
                   >Nombres (Obligatorio)</label
                 >
                 <input
                   type="text"
-                  id="nombre"
+                  id="nombreUsuario"
                   class="form-control"
                   placeholder="Ej: Lionel Andrés"
-                  minlength="6"
+                  minlength="3"
                   maxlength="45"
                   required
                 />
@@ -364,7 +364,7 @@
                   id="apellido"
                   class="form-control"
                   placeholder="Ej: Messi Cuccittini"
-                  minlength="6"
+                  minlength="4"
                   maxlength="45"
                   required
                 />
@@ -375,7 +375,7 @@
                 >
                 <input
                   type="email"
-                  id="email"
+                  id="emailUsuario"
                   class="form-control"
                   placeholder="Ej: liomessi10@gmail.com"
                   minlength="6"
@@ -389,7 +389,7 @@
                 >
                 <input
                   type="password"
-                  id="email"
+                  id="contraseña"
                   class="form-control"
                   placeholder="Mínimo 8 caracteres"
                   minlength="8"
@@ -401,6 +401,7 @@
                 <button
                   class="btn modal-registro btn-outline-primary text-white"
                   type="submit"
+                  id="btnAgregarUsuario"
                 >
                   Registrar
                 </button>
@@ -417,8 +418,8 @@
           <img src="../img/sinFondo-removebg-preview.png" class="logo-footer" />
           <p>
             Explora el épico universo gamer con estilo en GamerCode, tu destino
-            para productos exclusivos. Eleva tu experiencia de juego con nuestra
-            selección única. ¡Únete a la revolución gamer ahora!
+            para productos exclusivos.  Eleva tu experiencia de juego con nuestra
+            selección única.  ¡Únete a la revolución gamer ahora!
           </p>
         </div>
         <div class="col-footer">
@@ -476,5 +477,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/modalContacto.js" type="module"></script>
+    <script src="../js/app-administrarUsuario.js" type="module"></script>
   </body>
 </html>
