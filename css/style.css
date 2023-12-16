@@ -14,57 +14,66 @@ main {
   border-radius: 50px;
 }
 
-
 nav {
   background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(6, 40, 78) 91.6%);
-  font-family: 'Pixelify Sans',sans-serif;
-  
+  font-family: "Pixelify Sans", sans-serif;
 }
 
-
-
-.estilo-card-footer{
-  background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(7, 123, 149) 91.6%);
+.estilo-card-footer {
+  background-image: linear-gradient(
+    288deg,
+    #0d1320 1.5%,
+    rgb(7, 123, 149) 91.6%
+  );
 }
 
-.estilo-card-body{
-  Background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(5, 31, 60) 91.6%);
+.estilo-card-body {
+  background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(5, 31, 60) 91.6%);
 }
 
-.modal-fondo{
+.modal-fondo {
   background-image: linear-gradient(288deg, #0d1320 1.5%, rgb(2, 8, 15) 91.6%);
 }
 
-.img-slider{
- height: 450px;
- object-fit: cover;
+.img-slider {
+  height: 450px;
+  object-fit: cover;
 }
 
 .img-principal {
   height: 200px;
-    object-fit: cover;
-    border-radius: 50% solid 2px black;
-} 
-
-.fondo{
-  background: linear-gradient(0deg, rgba(2, 8, 15, 1) 0%, #1f3565 58%, #0d1320 100%);
+  object-fit: cover;
+  border-radius: 50% solid 2px black;
 }
 
-.fondo-admin{
-  background: linear-gradient(0deg, rgba(2, 8, 15, 1) 0%, #1f5765 58%, #0d1320 100%);
+.fondo {
+  background: linear-gradient(
+    0deg,
+    rgba(2, 8, 15, 1) 0%,
+    #1f3565 58%,
+    #0d1320 100%
+  );
+}
+
+.fondo-admin {
+  background: linear-gradient(
+    0deg,
+    rgba(2, 8, 15, 1) 0%,
+    #1f5765 58%,
+    #0d1320 100%
+  );
 }
 
 /* productos */
-.productos-tittulo{
-  font-family: 'Pixelify Sans',
-      sans-serif;
+.productos-tittulo {
+  font-family: "Pixelify Sans", sans-serif;
 }
 
-.imagen-carrousel{
+.imagen-carrousel {
   display: none;
 }
 
-.img-card-producto{
+.img-card-producto {
   height: 300px;
 }
 
@@ -76,25 +85,27 @@ nav {
   gap: 20px;
 }
 
-.card-fondo {
+.card {
   margin-bottom: 20px;
-  background: rgb(2,0,36);
-  background: linear-gradient(29deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 37%, rgba(0,212,255,1) 92%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    29deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 37%,
+    rgba(0, 212, 255, 1) 92%
+  );
   padding: 20px;
   box-sizing: border-box;
-
-}
-
-.card-imagen {
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .card-body {
   margin-top: 10px;
-  font-family: 'Roboto', sans-serif;
-  
+  font-family: "Roboto", sans-serif;
+  flex: 1 1 auto;
 }
 
 .price-button {
@@ -106,7 +117,7 @@ nav {
   border-radius: 7px;
 }
 
-.card-title{
+.card-title {
   text-align: center;
 }
 .card-footer {
@@ -114,10 +125,7 @@ nav {
   text-align: center;
 }
 
-
-
 .detail-button {
-
   color: white;
   padding: 10px;
   border: none;
@@ -155,40 +163,35 @@ nav {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.detail-button:hover, .detail-button:focus, .detail-button:active {
+.detail-button:hover,
+.detail-button:focus,
+.detail-button:active {
   color: white;
 }
-.detail-button:hover:before, .detail-button:focus:before, .detail-button:active:before {
+.detail-button:hover:before,
+.detail-button:focus:before,
+.detail-button:active:before {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
 }
 
-
-
-@media screen and (max-width: 767px){
-   .titulo-responsive{
-     font-family: 'Kanit', sans-serif;
-     font-size: 40px;
-     
-   }
+@media screen and (max-width: 767px) {
+  .titulo-responsive {
+    font-family: "Kanit", sans-serif;
+    font-size: 40px;
+  }
   .slider {
     display: none;
   }
-  .img-card-producto {
-      height: 200px;
-      width: 200px;
-    }
-  .imagen-carrousel{
+
+  .imagen-carrousel {
     display: inline;
   }
+}
 
-    
-} 
-
-@media all and (min-width: 768px) and (max-width: 991px){
-  
+@media all and (min-width: 768px) and (max-width: 991px) {
   .img-card-producto {
-      height: 200px;
-      width: 200px;
-    }
+    height: 200px;
+    width: 200px;
+  }
 }
