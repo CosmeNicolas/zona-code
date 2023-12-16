@@ -49,7 +49,6 @@ export default class Usuario{
     this.#contraseña = nuevaContraseñaontraseña;
     }
 
-  //este metodo sirve para el objeto JSON.stringify
   toJSON() {
     return {
       id: this.id,
