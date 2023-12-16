@@ -9,7 +9,7 @@ const nombre = document.getElementById("nombreUsuario"),
   apellido = document.getElementById("apellido"),
   email = document.getElementById("emailUsuario"),
   contraseña = document.getElementById("contraseña");
-const listaUsuarios = [];
+const listaUsuarios = JSON.parse(localStorage.getItem ('UsuariosKey')) || [];
 
 const mostrarModal = () => {
   modalRegistrarUsuario.show();
@@ -29,6 +29,7 @@ const crearUsuario = (e) => {
   listaUsuarios.push(nuevoUsuario);
   limpiarFormulario();
   guardarEnLocalStorage();
+  modalRegistrarUsuario.hide();
 };
 
 const limpiarFormulario = () => {
