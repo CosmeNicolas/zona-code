@@ -1,5 +1,5 @@
 import Producto from "./app-classProducto.js";
-
+import { validarCantidadCaracteres,  } from "./validaciones.js";
 
 const modalAdminProducto = new bootstrap.Modal(
   document.getElementById("administrarProducto")
@@ -24,7 +24,7 @@ const mostrarModal = () => {
 const crearProducto = (e) => {
   e.preventDefault();
   console.log("aqui debo crear el producto nuevo");
-
+  if (validarCantidadCaracteres(nombre.value, 2, 20) && validarCantidadCaracteres(categoria.value, 2, 20) && validarCantidadCaracteres(descripcion.value, 10, 50)) {
   const nuevoProducto = new Producto(
     undefined,
     nombre.value,
@@ -48,6 +48,15 @@ const crearProducto = (e) => {
     html: `<p style='color:white'>El Producto ${nuevoProducto.nombre} fue creado correctamente</p>`,
     icon: "success",
   });
+}else{
+  Swal.fire({
+    iconColor: "#FF4848", // Color para la advertencia (rojo en este caso)
+    background: "#274481",
+    title: "<h4 style='color:#fff'>" + `¡Advertencia!` + "</h4>",
+    html: `<p style='color:white'>Hubo errores en el formulario. Por favor, revísalos.</p>`,
+    icon: "warning", // Icono de advertencia
+  });
+}
 };
 
 function limpiarFormulario() {
