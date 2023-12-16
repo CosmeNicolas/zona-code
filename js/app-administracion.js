@@ -78,8 +78,7 @@ function crearFila(producto, fila) {
     <td>${producto.descripcion}</td>
     <td>${producto.stock}</td>
     <td>
-    <button class="btn btn-primary" onclick="verDetalleProducto('${producto.id}')">Detalle</button>
-      <button class="btn btn-warning me-1" onclick="editarProducto('${producto.id}')">Editar
+          <button class="btn btn-warning me-1" onclick="editarProducto('${producto.id}')">Editar
       </button>
       <button class="btn btn-danger" onclick="borrarProducto('${producto.id}')">Borrar</button>
     </td>
