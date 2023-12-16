@@ -42,8 +42,10 @@ const crearProducto = (e) => {
   crearFila(nuevoProducto, inventario.length);
   modalAdminProducto.hide();
   Swal.fire({
-    title: "Prodcuto creado",
-    text: `El Producto ${nuevoProducto.nombre} fue creado correctamente`,
+    iconColor: "#36D9BB",
+    background: "#274481",
+    title: "<h4 style='color:#fff'>" + `Producto Creado` + "</h4>",
+    html: `<p style='color:white'>El Producto ${nuevoProducto.nombre} fue creado correctamente</p>`,
     icon: "success",
   });
 };
@@ -145,10 +147,13 @@ window.editarProducto = (idProducto) => {
 
 window.borrarProducto = (idProducto) => {
   Swal.fire({
-    title: "¿Estas seguro que quieres borrar?",
-    text: "No puedes revertir este paso",
+    title: "<h4 style='color:#fff'>" + `¿Estas seguro que quieres borrar?` + "</h4>",
+    
+    
     icon: "warning",
     showCancelButton: true,
+    iconColor: "#36D9BB",
+    background: '#274481',
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
     confirmButtonText: "Borrar",
@@ -169,9 +174,10 @@ window.borrarProducto = (idProducto) => {
       
 
       Swal.fire({
-        title: "Contacto eliminado",
-        text: "El contacto fue eliminado exitosamente",
+        title: "<h4 style='color:#fff'>" + `Producto Eliminado` + "</h4>",
         icon: "success",
+        iconColor: "#36D9BB",
+        background: '#274481',
 
       });
     }
@@ -186,3 +192,6 @@ btnAgregarProducto.addEventListener("click", () => {
 formularioProducto.addEventListener("submit", crearProducto);
 
 cargaInicial();
+
+
+// carga de productos en el html
