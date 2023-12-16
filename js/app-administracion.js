@@ -106,7 +106,7 @@ window.editarProducto = (idProducto) => {
   //cambiar el boton de agregar > Editar
 
   const cambiarBoton = () => {
-    const botonEditar = document.getElementById('btnEditarContacto');
+    const botonEditar = document.getElementById('btnEditarProducto');
     botonEditar.innerText = "Editar";
     botonEditar.type = "button";
     botonEditar.removeEventListener("click", cambiarBoton)
