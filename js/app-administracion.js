@@ -24,7 +24,7 @@ const mostrarModal = () => {
 const crearProducto = (e) => {
   e.preventDefault();
   console.log("aqui debo crear el producto nuevo");
-  if (validarCantidadCaracteres(nombre.value, 2, 20) && validarCantidadCaracteres(categoria.value, 2, 20) && validarCantidadCaracteres(descripcion.value, 10, 50)) {
+  if (validarCantidadCaracteres(nombre.value, 2, 20) && validarCantidadCaracteres(categoria.value, 2, 20) && validarCantidadCaracteres(descripcion.value, 5, 25)) {
   const nuevoProducto = new Producto(
     undefined,
     nombre.value,
