@@ -1,0 +1,16 @@
+.bodyLogin {
+  background-image: url(../img/1920x1200-px-blur-gaussian-1539045-wallhere.com.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+
+.modal-contacto{
+  background-image: url(../img/1920x1200-px-blur-gaussian-1539045-wallhere.com.jpg);
+    font-size: 20px;
+  }
+
+  .modal-registro{
+    background-color: rgb(6, 40, 78)
+  }
