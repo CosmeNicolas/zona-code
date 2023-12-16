@@ -7,6 +7,8 @@ const nombre = document.getElementById('nombreUsuario'),
 apellido = document.getElementById('apellido'),
 email = document.getElementById('emailUsuario'),
 contraseña = document.getElementById('contraseña');
+const listaUsuarios = []
+
 
 const mostrarModal = () =>{
     modalRegistrarUsuario.show();
@@ -19,6 +21,7 @@ const crearUsuario = (e)=>{
 
     const nuevoUsuario = new Usuario(undefined, nombre.value, apellido.value, email.value, contraseña.value );
     console.log(nuevoUsuario)
+    listaUsuarios.push(nuevoUsuario)
 }
 
 
