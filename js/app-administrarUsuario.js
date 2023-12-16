@@ -25,7 +25,6 @@ const crearUsuario = (e) => {
     email.value,
     contraseña.value
   );
-  console.log(nuevoUsuario);
 
   listaUsuarios.push(nuevoUsuario);
   limpiarFormulario();
