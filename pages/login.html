@@ -340,14 +340,14 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="formularioUsuario">
               <div class="mb-3">
                 <label for="nombre" class="form-label"
                   >Nombres (Obligatorio)</label
                 >
                 <input
                   type="text"
-                  id="nombre"
+                  id="nombreUsuario"
                   class="form-control"
                   placeholder="Ej: Lionel Andrés"
                   minlength="6"
@@ -375,7 +375,7 @@
                 >
                 <input
                   type="email"
-                  id="email"
+                  id="emailUsuario"
                   class="form-control"
                   placeholder="Ej: liomessi10@gmail.com"
                   minlength="6"
@@ -389,7 +389,7 @@
                 >
                 <input
                   type="password"
-                  id="email"
+                  id="contraseña"
                   class="form-control"
                   placeholder="Mínimo 8 caracteres"
                   minlength="8"
@@ -401,6 +401,7 @@
                 <button
                   class="btn modal-registro btn-outline-primary text-white"
                   type="submit"
+                  id="btnAgregarUsuario"
                 >
                   Registrar
                 </button>
