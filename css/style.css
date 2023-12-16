@@ -107,11 +107,26 @@ nav {
   transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transición suave para el filtro y la opacidad */
 }
 
+/* Media query para dispositivos medianos y chicos */
+@media (max-width: 991px) {
+  .categoria-pop img {
+      filter: grayscale(0%);
+      opacity: 1;
+      transition: none; /* Elimina la transición en dispositivos medianos y chicos */
+  }
+}
+
+
 .categoria-pop:hover img {
   filter: grayscale(0%); /* Escala de grises al hacer hover */
   opacity: 1; /* Opacidad al hacer hover */
 }
 
+.rounded-circle {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%; /* Asegura que el ancho y alto sean iguales */
+}
 
 
 
