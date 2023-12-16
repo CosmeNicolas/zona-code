@@ -48,5 +48,17 @@ export default class Usuario{
   set contraseña(nuevaContraseña) {
     this.#contraseña = nuevaContraseñaontraseña;
     }
+
+  //este metodo sirve para el objeto JSON.stringify
+  toJSON() {
+    return {
+      id: this.id,
+      nombre: this.nombre,
+      apellido: this.apellido,
+      email: this.email,
+      contraseña: this.contraseña,
+    };
   }
+}
+
 

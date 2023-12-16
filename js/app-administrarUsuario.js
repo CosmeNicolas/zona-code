@@ -7,7 +7,7 @@ const nombre = document.getElementById('nombreUsuario'),
 apellido = document.getElementById('apellido'),
 email = document.getElementById('emailUsuario'),
 contraseña = document.getElementById('contraseña');
-const listaUsuarios = []
+const listaUsuarios = [];
 
 
 const mostrarModal = () =>{
@@ -21,10 +21,20 @@ const crearUsuario = (e)=>{
 
     const nuevoUsuario = new Usuario(undefined, nombre.value, apellido.value, email.value, contraseña.value );
     console.log(nuevoUsuario)
+    
     listaUsuarios.push(nuevoUsuario)
+    console.log(listaUsuarios)
+    limpiarFormulario();
+    guardarEnLocalStorage();
 }
 
+const limpiarFormulario = ()=>{
+    formularioUsuario.reset();
+}
 
+function guardarEnLocalStorage(){
+    localStorage.setItem('UsuariosKey', JSON.stringify(listaUsuarios))
+}
 
 
 btnAgregarUsuario.addEventListener('click', mostrarModal);
