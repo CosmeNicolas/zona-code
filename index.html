@@ -99,15 +99,11 @@
                 ></a>
               </li>
               <li>
-                <form class="d-flex" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
+                <form class="d-flex" role="search" id="formularioBusqueda">
+                  <input class="form-control me-2" type="search" id="campoDeBusqueda" placeholder="Buscar" aria-label="Search"
+                    minlength="2" maxlength="12" required />
                   <button class="btn btn-outline-light" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Buscar
                   </button>
                 </form>
               </li>
@@ -209,6 +205,10 @@
           <article class="row justify-content-center">
             <h2 class="text-light text-center my-3 productos-tittulo">
               Productos Destacados
+            </h2>
+
+            <h2 id="sincoincidencias" class="fs-2 d-none">
+              No se encontraron coincidencias
             </h2>
 
             <!-- CARGA DE PRODUCTOS -->
