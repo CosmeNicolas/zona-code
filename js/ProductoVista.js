@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     productos.forEach(producto => {
         const card = document.createElement('div');
-        card.className = 'card-fondo col-lg-3 col-md-6 col-sm-12 '; // Clases de Bootstrap aplicadas aquí
+        card.className = 'card-fondo m-2 col-lg-3 col-md-5 col-12 '; // Clases de Bootstrap aplicadas aquí
         card.innerHTML = `
-            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top pt-2>
             <div class="card-body">
                 <h5 class="card-title text-light">${producto.nombre}</h5>
                 <p class="card-text text-light">${producto.descripcion}</p>
