@@ -1,1 +1,1 @@
-let formularioBusque = document.getElementById('formularioBusqueda')
+let formularioBusque = document.getElementById('formularioDeBusqueda')
