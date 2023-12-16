@@ -12,13 +12,13 @@ const productosTotales = document.querySelectorAll(".card");
 document.addEventListener('keyup', (e) => {
   if (e.key === "Escape") {
     e.target.value = "";
-  } 
+  }
   if (e.target.matches('#renglonBusqueda')) {
-    const searchTerm = e.target.value.toLowerCase();
+    const buscarProducto = e.target.value.toLowerCase();
 
     const productosFiltrados = Array.from(productosTotales).filter(producto => {
       const textoProducto = producto.children[1].children[0].innerHTML.toLowerCase();
-      return textoProducto.includes(searchTerm);
+      return textoProducto.includes(buscarProducto);
     });
 
     productosTotales.forEach(producto => {
@@ -32,7 +32,7 @@ document.addEventListener('keyup', (e) => {
       }
     });
 
-     const productosOcultos = document.querySelectorAll('.ocultarProducto');
+    const productosOcultos = document.querySelectorAll('.ocultarProducto');
     if (productosOcultos.length >= productosTotales.length) {
       mensaje.className = "fs-1 text-center text-light my-5";
     } else {
