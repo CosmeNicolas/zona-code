@@ -186,3 +186,6 @@ btnAgregarProducto.addEventListener("click", () => {
 formularioProducto.addEventListener("submit", crearProducto);
 
 cargaInicial();
+
+
+// carga de productos en el html
