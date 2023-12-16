@@ -81,6 +81,8 @@ nav {
   background: rgb(2,0,36);
   background: linear-gradient(29deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 37%, rgba(0,212,255,1) 92%);
   padding: 20px;
+  box-sizing: border-box;
+
 }
 
 .card-imagen {
@@ -92,6 +94,7 @@ nav {
 .card-body {
   margin-top: 10px;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 .price-button {
@@ -100,15 +103,14 @@ nav {
   padding: 10px;
   border: none;
   cursor: pointer;
-  margin-bottom: 10px;
   border-radius: 7px;
 }
 
 .card-title{
   text-align: center;
 }
-.footer-card {
-  margin-top: 10px;
+.card-footer {
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -120,7 +122,6 @@ nav {
   padding: 10px;
   border: none;
   cursor: pointer;
-  margin: 0 auto;
   border-radius: 5px;
   display: inline-block;
   vertical-align: middle;
