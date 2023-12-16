@@ -100,8 +100,18 @@ nav {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  overflow: hidden;
 }
 
+.card img{
+  width: 100%;
+height: auto;
+transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Puedes ajustar el valor según tu preferencia */
+  }
 .card-body {
   margin-top: 10px;
   font-family: "Roboto", sans-serif;
