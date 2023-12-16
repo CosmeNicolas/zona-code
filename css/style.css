@@ -68,6 +68,11 @@ nav {
   height: 300px;
 }
 
+.estiloTabla{
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+}
+
 /*Categorias*/
 /* En tu archivo CSS */
 @-webkit-keyframes categoria-pop {
