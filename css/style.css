@@ -158,8 +158,8 @@ nav {
   background: linear-gradient(
     29deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 37%,
-    rgba(0, 212, 255, 1) 92%
+    rgb(5, 5, 31) 37%,
+    rgb(7, 50, 58) 92%
   );
   padding: 20px;
   box-sizing: border-box;
