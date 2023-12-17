@@ -8,3 +8,4 @@ const modalAmin = new bootstrap.Modal(
   };
   
   abrirModalAdmin.addEventListener("click", mostrarModalAdmin);
+  
