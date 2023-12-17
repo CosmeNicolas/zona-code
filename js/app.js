@@ -8,3 +8,4 @@ const mostrarModalOferta = new bootstrap.Modal(
 }  */
 
 document.addEventListener('DOMContentLoaded', mostrarModal);
+
