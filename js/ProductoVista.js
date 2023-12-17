@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function verDetalle(idProducto) {
-    alert('Detalles del producto con ID ' + idProducto);
+
+function navegarPaginaDetalle(codigo){
+    window.location.href = window.location.origin + '/pages/Detalle.html?codigo=' + codigo;
 }
