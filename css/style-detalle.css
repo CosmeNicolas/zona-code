@@ -1,27 +1,6 @@
 
 body {
     background: linear-gradient(0deg, rgba(21,35,64,1) 11%, rgba(54,217,187,1) 58%, rgba(35,100,140,1) 100%);
-    justify-content: center;
-
-}
-
-#mainPhoto{
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.imgCarousel{
-  width: 110px;
-  height: 110px;
-  border: 2px solid white;
-  margin: 3px;
-}
-
-.img{
-  border-radius: 10px;
-  cursor: pointer;
 }
 
 
