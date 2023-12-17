@@ -1,37 +1,23 @@
-//IMAGENES DE LOS PRODUCTOS
-let images = Array.from(document.getElementsByClassName("imgCarousel"))
-
-let mainPhoto = document.getElementById("mainPhoto")
-
-function updateImage(event){
-    let image = event.target
-
-    mainPhoto.src = image.src
-}
-
-images.forEach(function(image){
-    image.addEventListener("click",updateImage)
-});
 
 const parametroURL = new URLSearchParams(window.location.search);
 
-let listaPaquetes = JSON.parse(localStorage.getItem("inventario")) || [];
+let inventario = JSON.parse(localStorage.getItem("inventario")) || [];
 
-const paqueteBuscado = inventario.find((producto) => producto.codigo === parametroURL.get('codigo'));
+const productoBuscado = inventario.find((id) => producto.id === parametroURL.get('id'));
 
 /* render detalle paquete */
 let labelNombre = document.getElementById('producto-nombre');
 let labelPrecio = document.getElementById('producto-precio');
 let labelCategoria = document.getElementById('producto-categoria');
 let labelDescripcion = document.getElementById('producto-descripcion');
-let labelCodigo = document.getElementById('producto-codigo')
+let labelCodigo = document.getElementById('producto-id')
 
 
-labelCategoria.innerHTML = paqueteBuscado.categoria;
-labelNombre.innerHTML = paqueteBuscado.nombre;
-labelDescripcion.innerHTML = paqueteBuscado.descripcion;
-labelCodigo.innerHTML = paqueteBuscado.codigo;
-labelPrecio.innerHTML = `${paqueteBuscado.precio} $`;
+labelCategoria.innerHTML = productoBuscado.categoria;
+labelNombre.innerHTML = productoBuscado.nombre;
+labelDescripcion.innerHTML = productoBuscado.descripcion;
+labelCodigo.innerHTML = productoBuscado.codigo;
+labelPrecio.innerHTML = `${productoBuscado.precio} $`;
 
 
 // BOTON DE CANTIDAD
