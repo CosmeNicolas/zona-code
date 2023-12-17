@@ -16,7 +16,7 @@ let labelCodigo = document.getElementById('producto-id')
 labelCategoria.innerHTML = productoBuscado.categoria;
 labelNombre.innerHTML = productoBuscado.nombre;
 labelDescripcion.innerHTML = productoBuscado.descripcion;
-labelCodigo.innerHTML = productoBuscado.codigo;
+labelCodigo.innerHTML = productoBuscado.id;
 labelPrecio.innerHTML = `${productoBuscado.precio} $`;
 
 
