@@ -102,8 +102,12 @@
                   <button class="btn btn-outline-light" type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
-                  
                 </form>
+              </li>
+              <li class="nav-link text ms-5">
+                <a  id="abrirModalAdmin" href="#">
+                  <i class="fa-solid fa-gear fs-4"></i
+                ></a>
               </li>
             </ul>
           </div>
@@ -119,7 +123,7 @@
                 ><i class="fa-solid fa-circle-arrow-left tamIcono fa-2x"></i
               ></a>
               <h2 class="text-center">Bienvenido</h2>
-              <form class="justify-content-center">
+              <form class="justify-content-center" id="userform">
                 <div>
                   <label for="email" class="form-label"
                     >Correo Electrónico</label
@@ -140,7 +144,7 @@
                     type="password"
                     id="password"
                     class="form-control tamInp"
-                    min="8"
+                    min="4"
                     max="10"
                     name="password"
                     required
@@ -162,7 +166,7 @@
                     value="Iniciar Sesión"
                     class="btn btn-info"
                     href="../index.html"
-                  >
+                  />
                 </div>
                 <div class="my-3 text-center">
                   <span class="me-2"
@@ -316,7 +320,86 @@
           </div>
         </div>
       </div>
+ 
+      <div
+      class="modal fade text-center"
+      id="contactoAdmin"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-content text-center">
+          <div class="modal-header">
+            <h5>
+              Iniciar como Administrador
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body modal-contacto">
+            <div class="row">
+              <div class="col-md-6">
+                <form>
+                  <div class="text-light">
+                    <label for="nombre"></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      maxlength="30"
+                      minlength="2"
+                      id="nombre"
+                      placeholder="Usuario"
+                      required
+                    />
+                  </div>
+                  <div class="modalTexto text-light">
+                    <label for="email"></label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      maxlength="30"
+                      minlength="10"
+                      id="email"
+                      placeholder="Contraseña"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn mt-2 me-2 btn-primary">
+                    Iniciar Sesión
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-6">
+                <img
+              class="w-75"
+              src="../img/sinFondo-removebg-preview.png"
+              alt="logoLogin"
+            />                               
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     </main>
+
+
+
+
+
+
 
     <!-- Modal -->
     <div
@@ -480,6 +563,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/modalContacto.js" type="module"></script>
+    <script src="../js/loginAdmin.js"></script>
+    <script src="../js/login.js"></script>
     <script src="../js/app-administrarUsuario.js" type="module"></script>
   </body>
 </html>
