@@ -1,5 +1,5 @@
 function crearFila(usuario, fila) {
-  const tablaUsuarios = document.querySelector('tbody');
+  const tablaUsuarios = document.querySelector("tbody");
   tablaUsuarios.innerHTML += `
     <tr>
       <th scope="row">${fila}</th>
@@ -14,7 +14,7 @@ function crearFila(usuario, fila) {
 }
 
 function cargaInicial() {
-  const listaUsuarios = JSON.parse(localStorage.getItem('UsuariosKey')) || [];
+  const listaUsuarios = JSON.parse(localStorage.getItem("UsuariosKey")) || [];
 
   if (listaUsuarios.length > 0) {
     listaUsuarios.map((usuario, posicion) => {
