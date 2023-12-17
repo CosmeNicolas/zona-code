@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="d-flex justify-content-around">
                     <button
                         class="detail-button" 
-                        onclick="navegarPaginaDetalle('${producto.codigo}')">Ver Detalle</button>
+                        onclick="navegarPaginaDetalle('${producto.id}')">Ver Detalle</button>
                     <p class="card-text text-light">Precio: <button class="price-button text-black">${producto.precio}</button></p>
                 </div>
             </div>
