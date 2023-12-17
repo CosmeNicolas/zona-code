@@ -1,27 +1,6 @@
 
 body {
     background: linear-gradient(0deg, rgba(21,35,64,1) 11%, rgba(54,217,187,1) 58%, rgba(35,100,140,1) 100%);
-    justify-content: center;
-
-}
-
-#mainPhoto{
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.imgCarousel{
-  width: 110px;
-  height: 110px;
-  border: 2px solid white;
-  margin: 3px;
-}
-
-.img{
-  border-radius: 10px;
-  cursor: pointer;
 }
 
 
@@ -65,4 +44,41 @@ body {
   .textoDetalle{
     font-family: 'Roboto', sans-serif;
   }
-  
+
+  /* estilo puntaje con estrellas */
+.rate {
+  float: left;
+  height: 100%;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc107;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #ffc107;  
+}
+
+.card-text-reseña{
+  width: 100%;
+}
+
+#reviews .carousel-inner{
+  max-width: 900px;
+}
