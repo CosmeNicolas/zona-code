@@ -1,5 +1,5 @@
 import Producto from "./app-classProducto.js";
-import { validarCantidadCaracteres,  } from "./validaciones.js";
+import { validarCantidadCaracteres, } from "./validaciones.js";
 
 const modalAdminProducto = new bootstrap.Modal(
   document.getElementById("administrarProducto")
@@ -27,42 +27,42 @@ const validarUrlImagen = (url) => {
 
 const crearProducto = (e) => {
   e.preventDefault();
-  
+
   const urlImagenValida = validarUrlImagen(imagen.value);
   if (validarCantidadCaracteres(nombre.value, 2, 20) && validarCantidadCaracteres(categoria.value, 2, 20) && validarCantidadCaracteres(descripcion.value, 5, 25) &&
     urlImagenValida) {
-  const nuevoProducto = new Producto(
-    undefined,
-    nombre.value,
-    precio.value,
-    categoria.value,
-    imagen.value,
-    descripcion.value,
-    stock.value
-  );
-  console.log(nuevoProducto);
-  inventario.push(nuevoProducto);
-  console.log(inventario);
-  limpiarFormulario();
-  guardarEnLocalstorage();
-  crearFila(nuevoProducto, inventario.length);
-  modalAdminProducto.hide();
-  Swal.fire({
-    iconColor: "#36D9BB",
-    background: "#274481",
-    title: "<h4 style='color:#fff'>" + `Producto Creado` + "</h4>",
-    html: `<p style='color:white'>El Producto ${nuevoProducto.nombre} fue creado correctamente</p>`,
-    icon: "success",
-  });
-}else{
-  Swal.fire({
-    iconColor: "#FF4848", // Color para la advertencia (rojo en este caso)
-    background: "#274481",
-    title: "<h4 style='color:#fff'>" + `¡Advertencia!` + "</h4>",
-    html: `<p style='color:white'>Hubo errores en el formulario. Por favor, revísalos.</p>`,
-    icon: "warning", // Icono de advertencia
-  });
-}
+    const nuevoProducto = new Producto(
+      undefined,
+      nombre.value,
+      precio.value,
+      categoria.value,
+      imagen.value,
+      descripcion.value,
+      stock.value
+    );
+    console.log(nuevoProducto);
+    inventario.push(nuevoProducto);
+    console.log(inventario);
+    limpiarFormulario();
+    guardarEnLocalstorage();
+    crearFila(nuevoProducto, inventario.length);
+    modalAdminProducto.hide();
+    Swal.fire({
+      iconColor: "#36D9BB",
+      background: "#274481",
+      title: "<h4 style='color:#fff'>" + `Producto Creado` + "</h4>",
+      html: `<p style='color:white'>El Producto ${nuevoProducto.nombre} fue creado correctamente</p>`,
+      icon: "success",
+    });
+  } else {
+    Swal.fire({
+      iconColor: "#FF4848", // Color para la advertencia (rojo en este caso)
+      background: "#274481",
+      title: "<h4 style='color:#fff'>" + `¡Advertencia!` + "</h4>",
+      html: `<p style='color:white'>Hubo errores en el formulario. Por favor, revísalos.</p>`,
+      icon: "warning", // Icono de advertencia
+    });
+  }
 };
 
 function limpiarFormulario() {
@@ -127,7 +127,7 @@ window.editarProducto = (idProducto) => {
     botonEditar.type = "button";
     botonEditar.removeEventListener("click", cambiarBoton);
 
-    botonEditar.addEventListener("click",  (e) => {
+    botonEditar.addEventListener("click", (e) => {
       e.preventDefault();
 
       const urlImagenValida = validarUrlImagen(imagen.value);
@@ -179,12 +179,12 @@ window.editarProducto = (idProducto) => {
 
   cambiarBoton();
 };
-  
+
 window.borrarProducto = (idProducto) => {
   Swal.fire({
     title: "<h4 style='color:#fff'>" + `¿Estas seguro que quieres borrar?` + "</h4>",
-    
-    
+
+
     icon: "warning",
     showCancelButton: true,
     iconColor: "#36D9BB",
@@ -195,18 +195,18 @@ window.borrarProducto = (idProducto) => {
     cancelButtonText: "Cancelar",
   }).then((result) => {
     if (result.isConfirmed) {
-           
+
       const posicionProductoBuscado = inventario.findIndex(
         (itemProducto) => itemProducto.id === idProducto
       );
-       
-      inventario.splice(posicionProductoBuscado, 1);     
+
+      inventario.splice(posicionProductoBuscado, 1);
       guardarEnLocalstorage();
-      
-      const tablaProductos = document.querySelector("tbody");     
+
+      const tablaProductos = document.querySelector("tbody");
       tablaProductos.removeChild(
-      tablaProductos.children[posicionProductoBuscado]);
-      
+        tablaProductos.children[posicionProductoBuscado]);
+
 
       Swal.fire({
         title: "<h4 style='color:#fff'>" + `Producto Eliminado` + "</h4>",
@@ -229,4 +229,3 @@ formularioProducto.addEventListener("submit", crearProducto);
 cargaInicial();
 
 
-// carga de productos en el html
