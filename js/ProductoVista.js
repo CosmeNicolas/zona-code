@@ -1,8 +1,4 @@
-
-function navegarPaginaDetalle(id){
-    window.location.href = window.location.origin + '/pages/Detalle.html?codigo=' + id;
-}
-
+// En assets/js/productos.js
 document.addEventListener('DOMContentLoaded', () => {
     const productos = JSON.parse(localStorage.getItem("inventarioKey")) || [];
     const container = document.getElementById('product-container');
@@ -19,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="card-footer text-light">
             <div class="d-flex justify-content-around">
-            <button class="detail-button" onclick="navegarPaginaDetalle('${producto.id}')">Ver Detalle</button>
+            <button class="detail-button" onclick="verDetalle('${producto.id}')">Ver Detalle</button>
             <p class="card-text text-light">Precio: <button class="price-button text-black">${producto.precio}</button></p>
             </div>
          
@@ -30,3 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+function navegarPaginaDetalle(codigo){
+    window.location.href = window.location.origin + '/pages/Detalle.html?codigo=' + codigo;
+}
