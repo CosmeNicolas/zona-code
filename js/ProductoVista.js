@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     productos.forEach(producto => {
         const card = document.createElement('div');
+
         card.className = 'card m-2 col-lg-3 col-md-5 col-12'; // Clases de Bootstrap aplicadas aquí
         card.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top pt-2>
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function verDetalle(idProducto) {
-    alert('Detalles del producto con ID ' + idProducto);
+
+function navegarPaginaDetalle(codigo){
+    window.location.href = window.location.origin + '/pages/Detalle.html?codigo=' + codigo;
 }

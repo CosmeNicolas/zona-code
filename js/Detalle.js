@@ -13,6 +13,26 @@ images.forEach(function(image){
     image.addEventListener("click",updateImage)
 });
 
+const parametroURL = new URLSearchParams(window.location.search);
+
+let listaPaquetes = JSON.parse(localStorage.getItem("inventario")) || [];
+
+const paqueteBuscado = inventario.find((producto) => producto.codigo === parametroURL.get('codigo'));
+
+/* render detalle paquete */
+let labelNombre = document.getElementById('producto-nombre');
+let labelPrecio = document.getElementById('producto-precio');
+let labelCategoria = document.getElementById('producto-categoria');
+let labelDescripcion = document.getElementById('producto-descripcion');
+let labelCodigo = document.getElementById('producto-codigo')
+
+
+labelCategoria.innerHTML = paqueteBuscado.categoria;
+labelNombre.innerHTML = paqueteBuscado.nombre;
+labelDescripcion.innerHTML = paqueteBuscado.descripcion;
+labelCodigo.innerHTML = paqueteBuscado.codigo;
+labelPrecio.innerHTML = `${paqueteBuscado.precio} $`;
+
 
 // BOTON DE CANTIDAD
 var stockInicial = 85;
