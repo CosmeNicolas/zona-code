@@ -1,16 +1,18 @@
 
 const parametroURL = new URLSearchParams(window.location.search);
 
-let inventario = JSON.parse(localStorage.getItem("inventario")) || [];
+let inventario = JSON.parse(localStorage.getItem("inventarioKey")) || [];
 
-const productoBuscado = inventario.find((id) => producto.id === parametroURL.get('id'));
+const productoBuscado = inventario.find(producto => producto.id === parametroURL.get('id'));
+
 
 /* render detalle paquete */
 let labelNombre = document.getElementById('producto-nombre');
 let labelPrecio = document.getElementById('producto-precio');
 let labelCategoria = document.getElementById('producto-categoria');
 let labelDescripcion = document.getElementById('producto-descripcion');
-let labelCodigo = document.getElementById('producto-id')
+let labelCodigo = document.getElementById('producto-id');
+let labelImagen = document.getElementById('producto-imagen');
 
 
 labelCategoria.innerHTML = productoBuscado.categoria;
@@ -18,6 +20,7 @@ labelNombre.innerHTML = productoBuscado.nombre;
 labelDescripcion.innerHTML = productoBuscado.descripcion;
 labelCodigo.innerHTML = productoBuscado.id;
 labelPrecio.innerHTML = `${productoBuscado.precio} $`;
+labelImagen.src = productoBuscado.imagen;
 
 
 // BOTON DE CANTIDAD

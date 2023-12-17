@@ -1,7 +1,7 @@
 
 
 function navegarPaginaDetalle(id){
-    window.location.href = window.location.origin + '/pages/Detalle.html?codigo=' + id;
+    window.location.href = window.location.origin + '/pages/Detalle.html?id=' + id;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="d-flex justify-content-around">
                     <button
                         class="detail-button" 
-                        onclick="navegarPaginaDetalle('${producto.codigo}')">Ver Detalle</button>
+                        onclick="navegarPaginaDetalle('${producto.id}')">Ver Detalle</button>
                     <p class="card-text text-light">Precio: <button class="price-button text-black">${producto.precio}</button></p>
                 </div>
 
