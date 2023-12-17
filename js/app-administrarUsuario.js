@@ -40,5 +40,6 @@ function guardarEnLocalStorage() {
   localStorage.setItem("UsuariosKey", JSON.stringify(listaUsuarios));
 }
 
+
 btnAgregarUsuario.addEventListener("click", mostrarModal);
 formularioUsuario.addEventListener("submit", crearUsuario);

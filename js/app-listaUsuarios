@@ -1,0 +1,26 @@
+function crearFila(usuario, fila) {
+  const tablaUsuarios = document.querySelector('tbody');
+  tablaUsuarios.innerHTML += `
+    <tr>
+      <th scope="row">${fila}</th>
+      <td>${usuario.nombre}</td>
+      <td>${usuario.apellido}</td>
+      <td>${usuario.email}</td>
+      <td>${usuario.contraseña}</td>
+      <td>
+        <button class="btn btn-danger" onclick="borrarUsuario('${usuario.id}')">Borrar</button>
+      </td>
+    </tr>`;
+}
+
+function cargaInicial() {
+  const listaUsuarios = JSON.parse(localStorage.getItem('UsuariosKey')) || [];
+
+  if (listaUsuarios.length > 0) {
+    listaUsuarios.map((usuario, posicion) => {
+      crearFila(usuario, posicion + 1);
+    });
+  }
+}
+
+cargaInicial();
