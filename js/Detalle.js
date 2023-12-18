@@ -20,7 +20,9 @@ let labelStock = document.getElementById('producto-stock');
 labelNombre.innerHTML = productoBuscado.nombre;
 labelDescripcion.innerHTML = productoBuscado.descripcion;
 labelCodigo.innerHTML = productoBuscado.id;
-labelPrecio.innerHTML = `${productoBuscado.precio} $`;
+labelPrecio.innerHTML = `$${productoBuscado.precio} `;
+labelImagen.src = productoBuscado.imagen;
+labelStock.innerHTML = productoBuscado.stock;
 
   function incrementarCantidad() {
     let inputCantidad = document.getElementById("inputCantidad");

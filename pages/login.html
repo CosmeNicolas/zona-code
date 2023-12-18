@@ -14,27 +14,26 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <!-- fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Pixelify+Sans&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Maven+Pro:wght@800&family=Nunito+Sans:opsz@6..12&family=Pixelify+Sans&family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+
     <title>GameCode🎮</title>
   </head>
 
   <body class="bodyLogin">
     <header>
-      <nav
-        class="navbar navbar-expand-lg border-bottom border-body fixed-top"
-        data-bs-theme="dark"
-      >
+      <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand logo-nav" href="/index.html">
+          <a class="navbar-brand logo-nav" href="../index.html">
             <img
               class="logo-nav ms-3"
               src="/img/sinFondo-removebg-preview.png"
@@ -54,63 +53,53 @@
           </button>
 
           <div
-            class="collapse navbar-collapse justify-content-lg-center me-3"
+            class="collapse navbar-collapse justify-content-lg-center"
             id="navbarNav"
           >
-            <ul class="navbar-nav d-sm-flex">
+            <ul class="navbar-nav justify-content-center p-0 mt-3">
               <li class="nav-item">
                 <a
                   class="nav-link active text-decoration-underline"
                   aria-current="page"
-                  href="/index.html"
+                  href="../index.html"
                   ><i class="fa-solid fa-house"></i> Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="./pages/error404.html"
+                <a class="nav-link text-light" href="./error404.html"
                   ><i class="fa-solid fa-gamepad"></i> Productos</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="./pages/Nosotros.html"
+                <a class="nav-link text-light" href="./Nosotros.html"
                   ><i class="fa-solid fa-user-group"></i> Nosotros</a
                 >
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" id="abrirModalContacto" href="#">
-                  Contacto
+                  <i class="fa-solid fa-envelope"></i> Contacto
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="./login.html"
+                <a class="nav-link text-light" href="../pages/login.html"
                   ><i class="fa-solid fa-right-to-bracket"></i> Login</a
                 >
               </li>
               <li>
-                <a class="nav-link text-light disabled" aria-disabled="true"
+                <a
+                  class="nav-link text-light"
+                  aria-disabled="true"
+                  href="/pages/error404.html"
                   ><i class="fa-solid fa-cart-shopping"></i
-                ></a>
-              </li>
-              <li>
-                <form class="d-flex" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button class="btn btn-outline-light" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </form>
-              </li>
-              <li class="nav-link text ms-5">
-                <a id="abrirModalAdmin" href="#">
-                  <i class="fa-solid fa-gear fs-4"></i
                 ></a>
               </li>
             </ul>
           </div>
+          <li class="nav-link">
+            <a id="abrirModalAdmin" href="#">
+              <i class="fa-solid fa-gear fs-5 m-3"></i
+            ></a>
+          </li>
         </div>
       </nav>
     </header>
@@ -206,8 +195,6 @@
           </div>
         </div>
       </div>
-
-      <!-- ModalContacto -->
       <div
         class="modal fade"
         id="contactoModal"
@@ -321,6 +308,7 @@
         </div>
       </div>
 
+      <!-- Modal Administrador -->
       <div
         class="modal fade text-center"
         id="contactoAdmin"
@@ -336,6 +324,7 @@
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
+              onclick="cerrar()"
             ></button>
           </div>
           <div class="modal-body modal-contacto">
@@ -349,7 +338,7 @@
                       type="text"
                       class="form-control"
                       maxlength="15"
-                      minlength="2"
+                      minlength="4"
                       placeholder="Usuario"
                       required
                     />
@@ -361,8 +350,8 @@
                       input
                       type="password"
                       class="form-control"
-                      maxlength="30"
-                      minlength="10"
+                      maxlength="15"
+                      minlength="4"
                       id="email"
                       placeholder="Contraseña"
                       autocomplete="off"
@@ -373,7 +362,7 @@
                     type="button"
                     class="btn mt-2 me-2 btn-primary"
                     value="Entrar"
-                    onclick="loguear()"
+                    onclick="iniciarSesion()"
                   />
                   Iniciar Sesión
                 </form>
@@ -385,13 +374,12 @@
                   alt="logoLogin"
                 />
               </div>
+              <div class="text-light fs-6 mt-2" id="errorMensaje"></div>
             </div>
           </div>
         </div>
       </div>
     </main>
-
-    <!-- Modal -->
     <div
       class="modal fade"
       id="registrarUsuario"
@@ -406,7 +394,7 @@
               class="modal-title fs-5 text-center mx-auto me-3 text-white"
               id="registrarUsuarioLabel"
             >
-              Registrar contacto
+              Registrar usuario
             </h2>
             <button
               type="button"
@@ -487,7 +475,6 @@
         </div>
       </div>
     </div>
-
     <footer>
       <div class="row-footer">
         <div class="col-footer cuadroPrimero">
@@ -510,11 +497,13 @@
         <div class="col-footer">
           <h3 class="">Links</h3>
           <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Producos</a></li>
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Contacto</a></li>
-            <li><a href="">Extra!</a></li>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./error404.html">Producos</a></li>
+            <li><a href="./Nosotros.html">Nosotros</a></li>
+            <li>
+              <a href="./error404.html">Contacto</a>
+            </li>
+            <li><a href="./error404.html">Extra!</a></li>
           </ul>
         </div>
         <div class="col-footer">
@@ -552,6 +541,7 @@
       src="https://kit.fontawesome.com/d4c1aecd9b.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/modalContacto.js" type="module"></script>
     <script src="../js/loginAdmin.js"></script>
     <script src="../js/login.js"></script>
