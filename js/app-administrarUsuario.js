@@ -11,7 +11,6 @@ const nombre = document.getElementById("nombreUsuario"),
 const listaUsuarios = JSON.parse(localStorage.getItem("UsuariosKey")) || [];
 
 const mostrarModal = () => {
-  limpiarFormulario();
   modalRegistrarUsuario.show();
 };
 
