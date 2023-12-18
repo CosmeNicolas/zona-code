@@ -75,16 +75,14 @@
     <section class="row my-2">
       <!-- Contenedor imágen del producto -->
       <div class="col-lg-6 col-md-12 col-12 ">
-          <img src="../img/silla-azul.png" class="w-100 h-auto d-flex align-items-center" alt="img">
+          <img src="producto-imagen" class="w-100 h-auto d-flex align-items-center" alt="img" id="producto-imagen">
       </div>
 
       <div class="col-lg-6 col-md-12 col-12  ">
-        <p class="text-center text-uppercase col-4 my-3 " id="producto-id">
-          Código: lp-1502564
+        <p class="text-center text-uppercase col-6 my-3 " id="producto-id">
         </p> 
 
         <h2 class="text-center text-lg-start textoDetalle" id="producto-nombre">
-          Combo Teclado - Mouse Mecanico
         </h2>
 
         <h5 class=" text-lg-start textoDetalle" id="producto-categoria">
@@ -98,13 +96,22 @@
           $11111
         </button>
 
-        <h2 class="col-12 mt-4 text-center textoDetalle">
+        <h2 class="col-12 mt-4 textoDetalle">
           Caracteristicas
         </h2>
 
         <p class="col-12 tx-parrafo lh-lg textoDescripcion" id="producto-descripcion">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, modi!
          </p>
+
+         <div class="d-flex">
+    <p class="me-3">Stock Disponible:</p>
+    <p id="producto-stock">Contenido de producto-stock</p>
+</div>
+
+
+
+
 
          <div class="d-flex justify-content-center align-items-center">
           <p class="mb-0 me-5 fs-4">Cantidad:</p>
@@ -333,6 +340,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="../js/Detalle.js"></script>
+  <script src="../js/ProductoVista.js"></script>
 </body>
 
 </html>
