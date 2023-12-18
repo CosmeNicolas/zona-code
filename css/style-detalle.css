@@ -3,13 +3,6 @@ body {
     background: linear-gradient(0deg, rgba(21,35,64,1) 11%, rgba(54,217,187,1) 58%, rgba(35,100,140,1) 100%);
 }
 
-
-.textoDescripcion {
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    
-  }
-  
   .inputCantidad {
     width: 10%;
     background-color: #042a59de;
@@ -41,44 +34,10 @@ body {
     color: #f8f9fa;
   }
 
-  .textoDetalle{
-    font-family: 'Roboto', sans-serif;
+
+  .card-precio{
+    color: #1a0067;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-top: 15px;  
   }
-
-  /* estilo puntaje con estrellas */
-.rate {
-  float: left;
-  height: 100%;
-  padding: 0 10px;
-}
-.rate:not(:checked) > input {
-  position:absolute;
-  top:-9999px;
-}
-.rate:not(:checked) > label {
-  float:right;
-  width:1em;
-  overflow:hidden;
-  white-space:nowrap;
-  cursor:pointer;
-  font-size:30px;
-  color:#ccc;
-}
-.rate:not(:checked) > label:before {
-  content: '★ ';
-}
-.rate > input:checked ~ label {
-  color: #ffc107;    
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-  color: #ffc107;  
-}
-
-.card-text-reseña{
-  width: 100%;
-}
-
-#reviews .carousel-inner{
-  max-width: 900px;
-}
