@@ -18,6 +18,7 @@ let labelStock = document.getElementById('producto-stock');
 
 
 labelNombre.innerHTML = productoBuscado.nombre;
+labelCategoria.innerHTML = productoBuscado.categoria;
 labelDescripcion.innerHTML = productoBuscado.descripcion;
 labelCodigo.innerHTML = productoBuscado.id;
 labelPrecio.innerHTML = `$${productoBuscado.precio} `;
@@ -47,5 +48,5 @@ labelStock.innerHTML = productoBuscado.stock;
     let cantidadSeleccionada = parseInt(inputCantidad.value, 10) || 0;
     let nuevoStock = productoBuscado.stock - cantidadSeleccionada;
 
-    stockDisponible.textContent = "(" + nuevoStock + " Disponibles)";
+    stockDisponible.textContent = nuevoStock;
   }
