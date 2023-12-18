@@ -22,6 +22,15 @@ nav {
 
 }
 
+.tamaño-logos{
+  font-size: 70px ;
+}
+
+.bg-logos{
+  padding-top: 25px;
+  background-color: #1471a442;
+}
+
 .estilo-card-footer {
   background-image: linear-gradient(
     288deg,
