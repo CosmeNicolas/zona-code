@@ -18,9 +18,9 @@
   <title>GameCode🎮</title>
 </head>
 
-<body class="estilo-card-footer">
+<body>
   <header>
-    <nav class="navbar navbar-expand-lg border-bottom border-body fixed-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand logo-nav" href="/index.html">
           <img class="logo-nav ms-3" src="/img/sinFondo-removebg-preview.png" alt="logo-GameCode" />
@@ -30,8 +30,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-lg-center me-3" id="navbarNav">
-          <ul class="navbar-nav d-sm-flex">
+        <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
+          <ul class="navbar-nav  justify-content-center p-0 mt-3">
             <li class="nav-item">
               <a class="nav-link active text-decoration-underline" aria-current="page" href="/index.html"><i
                   class="fa-solid fa-house"></i> Inicio</a>
@@ -53,26 +53,19 @@
               <a class="nav-link text-light" href="./pages/login.html"><i class="fa-solid fa-right-to-bracket"></i>
                 Login</a>
             </li>
-            <!-- eliminiar luego de crear pagina administrador  -->
             <li class="nav-item">
               <a class="nav-link text-light" href="/pages/administracion.html">ADMIN</a>
-              >
             </li>
-            <!-- eliminiar luego de crear pagina administrador  -->
-            <!-- carrito -->
             <li>
-              <a class="nav-link text-light disabled" aria-disabled="true"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a class="nav-link text-light" aria-disabled="true" href="/pages/error404.html"><i
+                  class="fa-solid fa-cart-shopping"></i></a>
             </li>
             <!-- carriyo -->
             <!-- barra de busqueda -->
             <li>
               <form class="d-flex" role="search" id="formularioDeBusqueda">
-                <input class="form-control me-2" type="search" placeholder="Buscar Producto" 
-                id="renglonBusqueda" 
-                aria-label="Search"
-                  minlength="2"
-                  maxlength="12" 
-                  required />
+                <input class="form-control me-2" type="search" placeholder="Buscar Producto" id="renglonBusqueda"
+                  aria-label="Search" minlength="2" maxlength="12" required />
                 <button class="btn btn-outline-light" type="submit">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
@@ -86,13 +79,13 @@
   </header>
   <main>
     <!-- imagen responsive celulares  -->
-    <section class="img-responsive card container-fluid p-0 mt-5">
-      <img class="imagen-carrousel img-fluid card-img" src="./img/imagen2.jpg" alt="" />
+    <section class="img-responsive card">
+      <img class="imagen-carrousel img-fluid card-img" src="./img/imagen2.jpg" alt="imagen-realidadVirtual" />
       <div class="card-img-overlay d-flex flex-column justify-content-center">
         <h3 class="text-center align-items-center mt-5 text-light titulo-responsive">
-          ZonaCode🎮
+          GAMECODE 🎮
         </h3>
-        <p class="text-center text-light display-3">Un Mundo de Tecnologia</p>
+        <p class="text-center text-light display-3 border border-info ">Un Mundo de Tecnologia</p>
       </div>
     </section>
     <!-- slider -->
@@ -145,7 +138,7 @@
               No se encontraron coincidencias
             </h2>
             <div class="row d-flex justify-content-center" id="product-container">
-              
+
               <!-- Los productos se cargarán aquí -->
               <!-- Cada tarjeta se ajusta automáticamente a las clases de Bootstrap -->
             </div>
