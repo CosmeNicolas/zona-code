@@ -16,11 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top pt-2">
             <div class="card-body ">
                 <h5 class="card-title text-light py-2">${producto.nombre}</h5>
-                <p class="card-text text-light">${producto.descripcion}</p>  
-            </div>
-
-            <div>
-             <p class="card-text text-light">${producto.stock}</p> 
             </div>
             <div class="card-footer text-light">
 
