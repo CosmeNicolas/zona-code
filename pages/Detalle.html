@@ -69,85 +69,57 @@
   </header>
 
   <main>
+    <!-- inicio sectio card -->
     <section class="container">
-    <section class="row my-2">
+    <div class="row my-2">
       <!-- Contenedor imágen del producto -->
-      <div class="col-lg-6 col-md-12 col-12 ">
-          <img src="producto-imagen" class="w-100 h-auto d-flex align-items-center img-fluid" alt="img" id="producto-imagen">
+      <div class="col-12  col-lg-6 col-md-12 ">
+          <img src="producto-imagen" class="card-img-top" alt="img" id="producto-imagen">
       </div>
-
-      <div class="col-12 col-lg-6 col-md-12 ">
-        <p class="text-center text-uppercase col-6 my-3 " id="producto-id">
-        </p> 
-
-        <h2 class="text-center text-lg-start textoDetalle" id="producto-nombre">
-        </h2>
-
-        <h5 class=" text-lg-start textoDetalle" id="producto-categoria">
-          Perifericos
-        </h5>
-
-        <button
-          class="btn col-4 text-light rounded-5 mt-2 bg-primary"
-          type="button" id="producto-precio"
-        >
-          $11111
-        </button>
-
-        <h2 class="col-12 mt-4 textoDetalle">
-          Caracteristicas
-        </h2>
-
-        <p class="col-12 tx-parrafo lh-lg textoDescripcion" id="producto-descripcion">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, modi!
-         </p>
-
-         <div class="d-flex">
-    <p class="me-3">Stock Disponible:</p>
-    <p id="producto-stock"></p>
-</div>
-
-
-
-
-
-         <div class="d-flex justify-content-center align-items-center">
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush text-center text-uppercase text-light " id="producto-id">
+        <li class="list-group-item text-center text-lg-start textoDetalle" id="producto-nombre"></li>
+        <li class="list-group-item text-lg-start textoDetalle" id="producto-categoria">Perifericos</li>
+        <li class="list-group-item mt-4 textoDetalle">Caracteristica</li>
+        <li class="list-group-item mt-4 textoDetalle textoDescripcion" id="producto-descripcion"></li>
+        <li class="list-group-item mt-4 textoDetalle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, modi!</li>
+      </ul>
+      <button
+        class="btn col-4 text-light rounded-5 mt-2 bg-primary"
+        type="button" id="producto-precio"
+      >
+        $11111
+      </button>
+        <p class="me-3">Stock Disponible:</p>
+        <p id="producto-stock"></p>
+    </div>
+      <!--   <div class="d-flex justify-content-center align-items-center">
           <p class="mb-0 me-5 fs-4">Cantidad:</p>
-          <button
-            type="button"
-            class="fs-3 lh-1 rounded-2 px-2 pb-1 btnCantidad"
-            onclick="decrementarCantidad()"
-          >
+          <button type="button" class="fs-3 lh-1 rounded-2 px-2 pb-1 btnCantidad" onclick="decrementarCantidad()">
             -
           </button>
-          <input
-          id="inputCantidad"
-            class="border-0 rounded-2 text-center mx-4 px-2 py-2 inputCantidad text-light"
-            value="1"
-            oninput="actualizarStockDisponible()"
-          />
-          <button
-            type="button"
-            class="fs-3 lh-1 rounded-2 px-1 pb-1 btnCantidad"
-            onclick="incrementarCantidad()"
-          >
+          <input id="inputCantidad" class="border-0 rounded-2 text-center mx-4 px-2 py-2 inputCantidad text-light" value="1"
+            oninput="actualizarStockDisponible()" />
+          <button type="button" class="fs-3 lh-1 rounded-2 px-1 pb-1 btnCantidad" onclick="incrementarCantidad()">
             +
           </button>
         </div>
-        <div
-          class="col-9 d-flex flex-column flex-lg-row align-items-lg-center mx-auto"
-        >
-          <button
-            class="btn w-100 my-3 mx-2 text-light btnAgregarAlCarrito "
-          >
+        <div class="col-9 d-flex flex-column flex-lg-row align-items-lg-center mx-auto">
+          <button class="btn w-100 my-3 mx-2 text-light btnAgregarAlCarrito ">
             Agregar al Carrito
           </button>
           <button class="btn w-100  btnAgregarAListaDeDeseos">
-           Lista de Deseados
+            Lista de Deseados
           </button>
         </div>
-      </div>
+        </div>
+        -->
+</div>
     </section>
+
+
+<!-- fin card  -->
+
 
     <section id="reviews" class="px-4">
       <h3 class="py-2 text-center productos-tittulo fs-3">Reseñas</h3>
