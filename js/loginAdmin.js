@@ -9,12 +9,13 @@ const modalAmin = new bootstrap.Modal(
   
   abrirModalAdmin.addEventListener("click", mostrarModalAdmin);
 
+
   function loguear()
   {
-      let user=document.getElementById("usuario").value;
-      let pass=document.getElementById("clave").value;
+      let usuario=document.getElementById("usuario").value;
+      let contraseña=document.getElementById("clave").value;
   
-  if(user==="Gamer" && pass==="1234"){
+  if(usuario==="Gamer" && contraseña==="1234"){
       window.location="administracion.html"
   }
   else
