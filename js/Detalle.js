@@ -6,7 +6,6 @@ let inventario = JSON.parse(localStorage.getItem("inventarioKey")) || [];
 const productoBuscado = inventario.find(producto => producto.id === parametroURL.get('id'));
 
 
-
 let labelNombre = document.getElementById('producto-nombre');
 let labelPrecio = document.getElementById('producto-precio');
 let labelCategoria = document.getElementById('producto-categoria');
@@ -19,6 +18,7 @@ let labelStock = document.getElementById('producto-stock');
 
 labelNombre.innerHTML = productoBuscado.nombre;
 labelDescripcion.innerHTML = productoBuscado.descripcion;
+labelCategoria.innerHTML = productoBuscado.categoria;
 labelCodigo.innerHTML = productoBuscado.id;
 labelPrecio.innerHTML = `$${productoBuscado.precio} `;
 labelImagen.src = productoBuscado.imagen;
