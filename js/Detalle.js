@@ -26,7 +26,6 @@ labelImagen.src = productoBuscado.imagen;
 
 
 // BOTON DE CANTIDAD
-var stockInicial = 85;
 
   function incrementarCantidad() {
     let inputCantidad = document.getElementById("inputCantidad");
@@ -46,10 +45,10 @@ var stockInicial = 85;
 
   function actualizarStockDisponible() {
     let inputCantidad = document.getElementById("inputCantidad");
-    let stockDisponible = document.getElementById("stockDisponible");
+    let stockDisponible = document.getElementById("producto-stock");
 
     let cantidadSeleccionada = parseInt(inputCantidad.value, 10) || 0;
-    let nuevoStock = stockInicial - cantidadSeleccionada;
+    let nuevoStock = productoBuscado.stock - cantidadSeleccionada;
 
     stockDisponible.textContent = "(" + nuevoStock + " Disponibles)";
   }
