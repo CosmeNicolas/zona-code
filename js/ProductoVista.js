@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h5 class="card-title text-light py-2">${producto.nombre}</h5>
                 <p class="card-text text-light">${producto.descripcion}</p>  
             </div>
+
+            <div>
+             <p class="card-text text-light">${producto.stock}</p> 
+            </div>
             <div class="card-footer text-light">
 
                 <div class="d-flex justify-content-around">

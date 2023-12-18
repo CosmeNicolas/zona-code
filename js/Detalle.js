@@ -13,6 +13,7 @@ let labelCategoria = document.getElementById('producto-categoria');
 let labelDescripcion = document.getElementById('producto-descripcion');
 let labelCodigo = document.getElementById('producto-id');
 let labelImagen = document.getElementById('producto-imagen');
+let labelStock = document.getElementById('producto-stock');
 
 
 labelCategoria.innerHTML = productoBuscado.categoria;
@@ -20,6 +21,7 @@ labelNombre.innerHTML = productoBuscado.nombre;
 labelDescripcion.innerHTML = productoBuscado.descripcion;
 labelCodigo.innerHTML = productoBuscado.id;
 labelPrecio.innerHTML = `${productoBuscado.precio} $`;
+labelStock.innerHTML = productoBuscado.stock;
 labelImagen.src = productoBuscado.imagen;
 
 
