@@ -9,9 +9,12 @@ const nombre = document.getElementById("nombreUsuario"),
   email = document.getElementById("emailUsuario"),
   contraseña = document.getElementById("contraseña");
 const listaUsuarios = JSON.parse(localStorage.getItem("UsuariosKey")) || [];
+
 const mostrarModal = () => {
+  limpiarFormulario();
   modalRegistrarUsuario.show();
 };
+
 const crearUsuario = (e) => {
   e.preventDefault();
   const nuevoUsuario = new Usuario(
@@ -33,11 +36,14 @@ const crearUsuario = (e) => {
     icon: "success",
   });
 };
+
 const limpiarFormulario = () => {
   formularioUsuario.reset();
 };
+
 function guardarEnLocalStorage() {
   localStorage.setItem("UsuariosKey", JSON.stringify(listaUsuarios));
 }
+
 btnAgregarUsuario.addEventListener("click", mostrarModal);
 formularioUsuario.addEventListener("submit", crearUsuario);

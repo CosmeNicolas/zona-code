@@ -22,15 +22,7 @@ function cargaInicial() {
   }
 }
 
-/*window.borrarUsuario = (idUsuario)=>{
-const posicionUsuarioBuscado = listaUsuarios.findIndex((usuario)=> usuario.id === idUsuario);
-listaUsuarios.splice(posicionUsuarioBuscado,1);
-guardarEnLocalStorage();
-}
-*/
-
 function borrarUsuario(id) {
-  // Mostrar SweetAlert para confirmar el borrado
   Swal.fire({
     iconColor: "#36D9BB",
     background: "#274481",
@@ -40,7 +32,8 @@ function borrarUsuario(id) {
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Sí, bórralo",
+    confirmButtonText: "Sí, borrar",
+    cancelButtonText: "Cancelar"
   }).then((result) => {
     if (result.isConfirmed) {
       let listaUsuarios = JSON.parse(localStorage.getItem("UsuariosKey")) || [];
