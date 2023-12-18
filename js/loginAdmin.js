@@ -14,10 +14,16 @@ const modalAmin = new bootstrap.Modal(
   {
       let usuario=document.getElementById("usuario").value;
       let contraseña=document.getElementById("clave").value;
+      let errorMensaje = document.getElementById("errorMensaje");
   
+      if (usuario.trim() === "" || contraseña.trim() === "") {
+        errorMensaje.textContent = "Por favor, ingrese usuario y contraseña.";
+        return;
+    }
+    
   if(usuario==="Gamer" && contraseña==="1234"){
       window.location="administracion.html"
   }
   else
-  alert ("Datos incorrectos");
+  errorMensaje.textContent = "Usuario o Contraseña incorrectos";
   }
