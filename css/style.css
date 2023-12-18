@@ -294,6 +294,12 @@ transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
 }
 
+
+      .TablaAdministracionUsuarios {
+        height: 500px; /* Establece la altura deseada */
+      }
+
+
 @media screen and (max-width: 767px){
    .titulo-responsive{
      font-family: 'Kanit', sans-serif;
