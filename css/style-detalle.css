@@ -32,11 +32,7 @@ body {
     color: #160264;
   }
   
-  .btnAgregarAListaDeDeseos:hover,
-  .btnAgregarAListaDeDeseos:active {
-    background: #729aea;
-    color: #f8f9fa;
-  }
+ 
 
   
 
@@ -70,10 +66,24 @@ body {
   color: #ffc107;  
 }
 
-.card-text-reseña{
-  width: 100%;
-}
+
 
 #reviews .carousel-inner{
   max-width: 900px;
 }
+
+
+
+/* responsive card */
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .imagen-card-detalle {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .imagen-card-detalle {
+      width: 100%;
+    }
+}
+
