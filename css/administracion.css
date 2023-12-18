@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* PAGINA PRINCIPAL  */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  color: aliceblue;
+  background: rgb(57, 57, 247);
+}
+
+.btnEstilo {
+  background-color: blueviolet;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+
+.btnEstilo {
+  background-color: blueviolet;
+}
+/* PAGINA PRINCIPAL  */
+
+.bg-blue {
+  color: aliceblue;
+  background: rgba(4, 4, 11, 0.572);
+}
+/* PAGINA PRINCIPAL  */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  color: aliceblue;
+  background: rgb(57, 57, 247);
+}
+
+/* FOOTER */
+footer {
+  background: rgb(9, 9, 137);
+  padding: 50px 0;
+}
+
+footer h4 {
+  margin: top 0;
+}
+footer ul {
+  list-style: none;
+}
+
+footer img {
+  height: 2.2em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Audiowide", cursive;
+}
+.bg-blue {
+  color: aliceblue;
+  background: rgba(4, 4, 11, 0.572);
+}
+.btnEstilo {
+  background-color: blueviolet;
+}
+
+#paquetes .card, #features .card {
+    background: #00000092;
+    color: white;
+}
+.btn-primary {
+  --bs-btn-bg: #021e45;
+  --bs-btn-border-color: #111b3e;
+  --bs-btn-hover-bg: #ae47ee;
+  --bs-btn-hover-border-color: #a02ef8;
+}
+
+.navbar {
+  filter: drop-shadow(0px 0px 3px #000);
+  transition: all 0.5s;
+  padding-top: 0;
+}
+
+.navbar-brand img {
+  height: 2.2em;
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.vh-100 {
+  height: 100vh;
+}
+#img-display {
+  overflow: hidden;
+}
+#paquetes {
+  background-image: url("../img/gradient-liquid-background-design_52683-70580.jpg");
+}
+#bg-video {
+  display: block;
+  position: relative;
+}
+
+#features {
+  overflow: hidden;
+}
+
+#video-text {
+  background-color: #0000007a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+#video-text h1 {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .boton-hamburguesa {
+    background-color: black;
+  }
+}
