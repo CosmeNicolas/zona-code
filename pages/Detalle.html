@@ -93,34 +93,54 @@
             <p class="m-0">Agrega productos por <b>$50.000</b> al carrito para tener <span class="text-uppercase">envío gratis a tu domicilio</span></p>
           </div>
           <div class="d-flex align-items-center justify-content-between">
-            
+            <p class="mb-0 me-5 fs-4">Cantidad:</p>
+          <button
+            type="button"
+            class="fs-3 lh-1 rounded-2 px-2 pb-1 btnCantidad"
+            onclick="decrementarCantidad()"
+          >
+            -
+          </button>
+          <input
+          id="inputCantidad"
+            class="border-0 rounded-2 text-center mx-4 px-2 py-2 inputCantidad text-light"
+            value="1"
+            oninput="actualizarStockDisponible()"
+          />
+          <button
+            type="button"
+            class="fs-3 lh-1 rounded-2 px-1 pb-1 btnCantidad"
+            onclick="incrementarCantidad()"
+          >
+            +
+          </button>
             <div class="p-1 text-success text-center bg-success bg-opacity-25">
-              <p class="m-0"><i class="fa-regular fa-circle-check text-success"></i> 10 disponibles</p>
+              <p class="m-0"><i class="fa-regular fa-circle-check text-success" id="producto-stock"></i></p>
             </div>
           </div>
-          
-          <a href="./carrito.html" class="btn btn-primary my-3 w-100">Comprar ahora</a>
-          <button type="submit" class="btn btn-success w-100">Añadir al Carrito</button>
+          <div
+          class="col-9 d-flex flex-column flex-lg-row align-items-lg-center mx-auto"
+        >
+          <button
+            class="btn w-100 my-3 mx-2 text-light btnAgregarAlCarrito "
+          >
+            Agregar al Carrito
+          </button>
+          <button class="btn w-100  btnAgregarAListaDeDeseos">
+           Lista de Deseados
+          </button>
+        </div>
         </section>        
         
         
         <!-- DESCRIPCIÓN DEL PRODUCTO -->
         
         <section class="col-12 p-3 mt-3 border border-light border-opacity-10 rounded">
-          <h3 class="text-uppercase">Descripción</h3>
-          <p class="text-uppercase">Barra con estribo para máquina</p>
+          <h3 class="text-uppercase"></h3>
+          <p class="text-uppercase" id="producto-categoria"></p>
 
-          <h4 class="text-uppercase">Especificaciones</h4>
-          <ul>
-            <li>Cuerpo cromado y macizo.</li>
-            <li>Empuñaduras recubiertas</li>
-            <li>Centro giratorio para mejor uso</li>
-            <li>Largo aproximado: 70 cm</li>
-            <li>Excelente calidad</li>
-            <li>Materiales de la estructura: Acero.</li>
-            <li>Material del mango: Caucho anatómico.</li>
-            <li>Marca: Expert.</li>
-          </ul>
+          <h4 class="text-uppercase" id="producto-descripcion"></h4>
+      
         </section>
         
         
