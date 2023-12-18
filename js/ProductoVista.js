@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     productos.forEach(producto => {
         const card = document.createElement('div');
-
-        card.className = 'card col-12 col-lg-3 col-md-6 '; 
+        card.className = 'card col-12 col-lg-3 col-md-6 ';
         card.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top pt-2">
             <div class="card-body ">
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `;
-
         container.appendChild(card);
     });
 });
