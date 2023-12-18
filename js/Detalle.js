@@ -48,5 +48,5 @@ labelStock.innerHTML = productoBuscado.stock;
     let cantidadSeleccionada = parseInt(inputCantidad.value, 10) || 0;
     let nuevoStock = productoBuscado.stock - cantidadSeleccionada;
 
-    stockDisponible.textContent = "(" + nuevoStock + " Disponibles)";
+    stockDisponible.textContent = nuevoStock;
   }
