@@ -30,17 +30,32 @@ guardarEnLocalStorage();
 */
 
 function borrarUsuario(id) {
-  let listaUsuarios = JSON.parse(localStorage.getItem("UsuariosKey")) || [];
-  listaUsuarios = listaUsuarios.filter(usuario => usuario.id !== id);
-  localStorage.setItem("UsuariosKey", JSON.stringify(listaUsuarios));
+  // Mostrar SweetAlert para confirmar el borrado
   Swal.fire({
     iconColor: "#36D9BB",
     background: "#274481",
-    title: "<h4 style='color:#fff'>" + `Usuario borrado` + "</h4>",
-    html: `<p style='color:white'>El usuario fue borrado correctamente</p>`,
-    icon: "success",
+    title: "<h3 style='color:#fff'>" + "¿Estás seguro?" + "</h3>",
+    html: `<p style='color:white'>¡No podrás revertir esto!</p>`,
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sí, bórralo",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let listaUsuarios = JSON.parse(localStorage.getItem("UsuariosKey")) || [];
+      listaUsuarios = listaUsuarios.filter((usuario) => usuario.id !== id);
+      localStorage.setItem("UsuariosKey", JSON.stringify(listaUsuarios));
+      Swal.fire({
+        iconColor: "#36D9BB",
+        background: "#274481",
+        title: "<h4 style='color:#fff'>" + `Usuario borrado` + "</h4>",
+        html: `<p style='color:white'>El usuario fue borrado correctamente</p>`,
+        icon: "success",
+      });
+      cargarListaUsuarios();
+    }
   });
-  cargarListaUsuarios();
 }
 
 function cargarListaUsuarios() {
@@ -55,16 +70,5 @@ function cargarListaUsuarios() {
     });
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 cargaInicial();
