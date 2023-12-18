@@ -1,7 +1,7 @@
 
 
 function navegarPaginaDetalle(id){
-    window.location.href = window.location.origin + '/pages/Detalle.html?codigo=' + id;
+    window.location.href = window.location.origin + '/pages/Detalle.html?id=' + id;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top pt-2">
             <div class="card-body ">
                 <h5 class="card-title text-light py-2">${producto.nombre}</h5>
-                <p class="card-text text-light">${producto.descripcion}</p>  
             </div>
             <div class="card-footer text-light">
-
-            <div class="d-flex justify-content-around">
-            <button class="detail-button" onclick="verDetalle('${producto.id}')">Ver Detalle</button>
-            <p class="card-text text-light">Precio: <button class="price-button text-black">${producto.precio}</button></p>
-            </div>
+                <div class="d-flex justify-content-around">
+                    <button
+                        class="detail-button" 
+                        onclick="navegarPaginaDetalle('${producto.id}')">Ver Detalle</button>
+                    <p class="card-text text-light">Precio: <button class="price-button text-black">${producto.precio}</button></p>
+                </div>
 
             </div>
         `;
