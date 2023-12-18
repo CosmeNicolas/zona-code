@@ -21,4 +21,50 @@ function cargaInicial() {
     });
   }
 }
+
+/*window.borrarUsuario = (idUsuario)=>{
+const posicionUsuarioBuscado = listaUsuarios.findIndex((usuario)=> usuario.id === idUsuario);
+listaUsuarios.splice(posicionUsuarioBuscado,1);
+guardarEnLocalStorage();
+}
+*/
+
+function borrarUsuario(id) {
+  let listaUsuarios = JSON.parse(localStorage.getItem("UsuariosKey")) || [];
+  listaUsuarios = listaUsuarios.filter(usuario => usuario.id !== id);
+  localStorage.setItem("UsuariosKey", JSON.stringify(listaUsuarios));
+  Swal.fire({
+    iconColor: "#36D9BB",
+    background: "#274481",
+    title: "<h4 style='color:#fff'>" + `Usuario borrado` + "</h4>",
+    html: `<p style='color:white'>El usuario fue borrado correctamente</p>`,
+    icon: "success",
+  });
+  cargarListaUsuarios();
+}
+
+function cargarListaUsuarios() {
+  const tablaUsuarios = document.querySelector("tbody");
+  tablaUsuarios.innerHTML = "";
+
+  const listaUsuarios = JSON.parse(localStorage.getItem("UsuariosKey")) || [];
+
+  if (listaUsuarios.length > 0) {
+    listaUsuarios.forEach((usuario, posicion) => {
+      crearFila(usuario, posicion + 1);
+    });
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 cargaInicial();

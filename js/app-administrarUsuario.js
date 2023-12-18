@@ -28,7 +28,7 @@ const crearUsuario = (e) => {
   Swal.fire({
     iconColor: "#36D9BB",
     background: "#274481",
-    title: "<h4 style='color:#fff'>" + `Contacto Creado` + "</h4>",
+    title: "<h4 style='color:#fff'>" + `Usuario Creado` + "</h4>",
     html: `<p style='color:white'>Tu usuario fue creado correctamente</p>`,
     icon: "success",
   });
