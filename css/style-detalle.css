@@ -5,11 +5,7 @@ body {
 }
 
 
-.textoDescripcion {
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    
-  }
+
   
   .inputCantidad {
     width: 10%;
@@ -42,9 +38,7 @@ body {
     color: #f8f9fa;
   }
 
-  .textoDetalle{
-    font-family: 'Roboto', sans-serif;
-  }
+  
 
   /* estilo puntaje con estrellas */
 .rate {

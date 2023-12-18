@@ -149,7 +149,7 @@ nav {
   gap: 20px;
 }
 
-/* .card {
+.card {
   margin-bottom: 20px;
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -165,22 +165,22 @@ nav {
   flex-direction: column;
   min-width: 0;
   overflow: hidden;
-} */
+}
 
-/* .card img{
+.card img{
   width: 100%;
 height: auto;
 transition: transform 0.3s ease-in-out;
-} */
-/* Puedes ajustar el valor según tu preferencia */
-/* .card:hover img {
-  transform: scale(1.1); 
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Puedes ajustar el valor según tu preferencia */
   }
 .card-body {
   margin-top: 10px;
   font-family: "Roboto", sans-serif;
   flex: 1 1 auto;
-} */
+}
 
 .price-button {
   background-color: #16c8f0; /* Color de fondo del botón de precio */
