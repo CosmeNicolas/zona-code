@@ -1,4 +1,6 @@
-const modalAdmin = new bootstrap.Modal(document.getElementById("contactoAdmin"));
+const modalAdmin = new bootstrap.Modal(
+  document.getElementById("contactoAdmin")
+);
 const abrirModalAdmin = document.getElementById("abrirModalAdmin");
 const formLogin = document.getElementById("formLogin");
 const errorMensaje = document.getElementById("errorMensaje");
@@ -14,6 +16,11 @@ function iniciarSesion() {
   let contraseña = document.getElementById("clave").value;
   let errorMensaje = document.getElementById("errorMensaje");
 
+  if (usuario.trim() === "" || contraseña.trim() === "") {
+    errorMensaje.textContent = "Por favor, ingrese usuario y contraseña.";
+    return;
+  }
+
   if (!validarCampos(usuario, contraseña)) {
     return;
   }
@@ -24,22 +31,22 @@ function iniciarSesion() {
     errorMensaje.textContent = "Usuario o Contraseña incorrectos";
     limpiarFormulario();
   }
-
-
 }
- 
+
 function validarCampos(usuario, contraseña) {
   const soloLetrasNumeros = /^[a-zA-Z0-9]+$/;
   const soloNumeros = /^\d+$/;
 
-  if (usuario.trim() === "" || !soloLetrasNumeros.test(usuario)) {
-    errorMensaje.textContent = "El usuario debe contener solo letras y números.";
+  if (usuario.trim() === "" || !soloLetrasNumeros.test(usuario) || usuario.length < 4 || usuario.length > 15) {
+    errorMensaje.textContent =
+      "El usuario debe contener letras y/o números.";
+      limpiarFormulario();
     return false;
-    
   }
 
-  if (contraseña.trim() === "" || !soloNumeros.test(contraseña)) {
+  if (contraseña.trim() === "" || !soloNumeros.test(contraseña) || contraseña.length < 4 || contraseña.length > 15) {
     errorMensaje.textContent = "La contraseña debe contener solo números.";
+    limpiarFormulario();
     return false;
   }
 
@@ -47,9 +54,10 @@ function validarCampos(usuario, contraseña) {
   
 }
 
+
+
 function limpiarFormulario() {
   formLogin.reset();
-  
 }
 
 function cerrar() {
@@ -57,6 +65,3 @@ function cerrar() {
   document.getElementById("clave").value = "";
   document.getElementById("errorMensaje").textContent = "";
 }
-
-
-
