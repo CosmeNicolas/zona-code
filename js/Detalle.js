@@ -18,7 +18,6 @@ labelNombre.innerHTML = productoBuscado.nombre;
 labelDescripcion.innerHTML = productoBuscado.descripcion;
 labelCodigo.innerHTML = productoBuscado.id;
 labelPrecio.innerHTML = `${productoBuscado.precio} $`;
-
 var stockInicial = 85;
 
   function incrementarCantidad() {
