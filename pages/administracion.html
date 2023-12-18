@@ -21,6 +21,7 @@
 
 <body class="fondo-admin">
   <header>
+    
     <nav class="navbar navbar-expand-lg border-bottom border-body d-flex py-" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand logo-nav" href="/index.html">
@@ -71,8 +72,35 @@
       </div>
     </nav>
   </header>
-  <main class="container my-4">
-
+ 
+  <main class="container my-4 ">
+    <section class="container">
+    
+    <div>
+    <p class="d-inline-flex gap-1">
+      <a class="btn btn-primary text-center" data-bs-toggle="collapse" href="#collapseUsuarios" role="button" aria-expanded="false" aria-controls="collapseUsuarios">
+        Administrar Usuarios
+      </a>
+      
+    </p>
+  </div>
+    <div class="collapse" id="collapseUsuarios">
+      <div class="card card-body">
+        <iframe class="TablaAdministracionUsuarios" src="administracionUsuarios.html" frameborder="0"></iframe>
+      </div>
+    </div>
+    <div>
+    <p class="d-inline-flex gap-1">
+      <a class="btn btn-primary text-center" data-bs-toggle="collapse" href="#collapseProductos" role="button" aria-expanded="false" aria-controls="collapseProductos">
+        Administrar Productos
+      </a>
+      
+    </p>
+  </div>
+    <div class="collapse show" id="collapseProductos">
+      <div class="card card-body">
+     
+     
     <div class="d-flex align-items-center justify-content-between">
       <h1 class="estiloTabla text-light">Lista Productos 🎮</h1>
       <button class="btn btn-primary" id="btnNuevoProducto">Nuevo Producto</button>
@@ -93,18 +121,7 @@
           </tr>
         </thead>
         <tbody>
-          <!-- comentar luego de hacer logica 
-          <tr>
-                      <th scope="row">1</th>
-                      <td>PS5</td>
-                      <td>$3000</td>
-                      <td>Consolas</td>
-                      <td>🎮</td>
-                      <td>Consola PS5,Sony</td>
-                      <td>10</td>
-                      <td><button class="btn btn-warning">Editar</button></td>
-                      <td><button class="btn btn-danger">Borrar</button></td>
-                    </tr> -->
+          
         </tbody>
       </table>
     </section>
@@ -154,6 +171,10 @@
       </div>
     </div>
   </div>
+</div>
+</div>
+</section>
+
 
   <footer class="">
     <div class="row-footer">
