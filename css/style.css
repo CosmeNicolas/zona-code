@@ -60,7 +60,7 @@ nav {
   top: 50%; /* Ajusta la posición vertical del párrafo */
   left: 50%; /* Centra horizontalmente en el contenedor */
   transform: translateX(-50%);
-  color: white; /* Color del texto */
+  color: rgb(255, 249, 249); /* Color del texto */
   font-size: 35px;
   }
 
@@ -194,15 +194,9 @@ nav {
   gap: 20px;
 }
 
-.card {
+.card-principal-productos {
   margin-bottom: 20px;
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    29deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(5, 5, 31) 37%,
-    rgb(7, 50, 58) 92%
-  );
   padding: 20px;
   box-sizing: border-box;
   position: relative;
@@ -212,16 +206,7 @@ nav {
   overflow: hidden;
 }
 
-.card img{
-  width: 100%;
-height: auto;
-transition: transform 0.3s ease-in-out;
-}
-
-.card:hover img {
-  transform: scale(1.1); /* Puedes ajustar el valor según tu preferencia */
-  }
-.card-body {
+.card-body-prod {
   margin-top: 10px;
   font-family: "Roboto", sans-serif;
   flex: 1 1 auto;
@@ -236,10 +221,10 @@ transition: transform 0.3s ease-in-out;
   border-radius: 7px;
 }
 
-.card-title {
+.card-title-prod {
   text-align: center;
 }
-.card-footer {
+.card-footer-prod {
   margin-top: 5px;
   text-align: center;
 }
