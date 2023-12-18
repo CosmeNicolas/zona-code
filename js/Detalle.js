@@ -6,7 +6,7 @@ let inventario = JSON.parse(localStorage.getItem("inventarioKey")) || [];
 const productoBuscado = inventario.find(producto => producto.id === parametroURL.get('id'));
 
 
-/* render detalle paquete */
+
 let labelNombre = document.getElementById('producto-nombre');
 let labelPrecio = document.getElementById('producto-precio');
 let labelCategoria = document.getElementById('producto-categoria');
@@ -16,16 +16,11 @@ let labelImagen = document.getElementById('producto-imagen');
 let labelStock = document.getElementById('producto-stock');
 
 
-labelCategoria.innerHTML = productoBuscado.categoria;
+
 labelNombre.innerHTML = productoBuscado.nombre;
 labelDescripcion.innerHTML = productoBuscado.descripcion;
 labelCodigo.innerHTML = productoBuscado.id;
 labelPrecio.innerHTML = `${productoBuscado.precio} $`;
-labelStock.innerHTML = productoBuscado.stock;
-labelImagen.src = productoBuscado.imagen;
-
-
-// BOTON DE CANTIDAD
 
   function incrementarCantidad() {
     let inputCantidad = document.getElementById("inputCantidad");

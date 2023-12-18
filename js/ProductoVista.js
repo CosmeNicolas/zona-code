@@ -1,5 +1,4 @@
 
-
 function navegarPaginaDetalle(id){
     window.location.href = window.location.origin + '/pages/Detalle.html?id=' + id;
 }
@@ -31,5 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(card);
     });
 });
-
 
