@@ -1,12 +1,10 @@
 
-// Modificar el código JavaScript para la página de Lista de Deseos
 document.addEventListener('DOMContentLoaded', () => {
     const listaDeseos = JSON.parse(localStorage.getItem("listaDeseos")) || [];
     const container = document.getElementById('wishlist-container');
 
     listaDeseos.forEach(producto => {
         const card = document.createElement('div');
-        // Construir la tarjeta de producto en la lista de deseos (puedes reutilizar parte del código de la página principal)
         card.className = 'card-principal-productos m-2 col-lg-3 col-md-5 col-12'; 
         card.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top pt-2">
@@ -32,7 +30,6 @@ function eliminarListaDeseos(id) {
     if (index !== -1) {
         listaDeseos.splice(index, 1);
         localStorage.setItem("listaDeseos", JSON.stringify(listaDeseos));
-
         Swal.fire({
             title: "Eliminado",
             text: "Lamentamos que tu producto ya no lo desees.",
