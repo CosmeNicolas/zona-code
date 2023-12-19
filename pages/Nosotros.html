@@ -3,9 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="description" content="ecommerce de productos gamers" />
+    <meta
+      name="author"
+      content="Antonella Ortega, Pablo Moyano, Nicolas Mas, Adrian Chanampa, Julian Toranzo"
+    />
+    <meta
+      name="keywords"
+      content="Productos Gamers, PC, perifericos, juegos, consolas, PS5, PS4, placa de video"
+    />
     <link rel="stylesheet" href="../css/style-Nosotros.css" />
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link rel="stylesheet" href="../css/footer.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Pixelify+Sans&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Maven+Pro:wght@800&family=Nunito+Sans:opsz@6..12&family=Pixelify+Sans&family=Roboto&display=swap"
       rel="stylesheet"
     />
     <title>GameCode🎮</title>
@@ -24,12 +34,9 @@
 
   <body>
     <header>
-      <nav
-        class="navbar navbar-expand-lg border-bottom border-body d-flex py-"
-        data-bs-theme="dark"
-      >
+      <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand logo-nav" href="/index.html">
+          <a class="navbar-brand logo-nav" href="../index.html">
             <img
               class="logo-nav ms-3"
               src="/img/sinFondo-removebg-preview.png"
@@ -49,67 +56,57 @@
           </button>
 
           <div
-            class="collapse navbar-collapse justify-content-lg-end me-3"
+            class="collapse navbar-collapse justify-content-lg-center"
             id="navbarNav"
           >
-            <ul class="navbar-nav">
+            <ul class="navbar-nav justify-content-center">
               <li class="nav-item">
                 <a
-                  class="nav-link text-light"
+                  class="nav-link active text-decoration-underline"
                   aria-current="page"
-                  href="/index.html"
-                  >Inicio</a
+                  href="../index.html"
+                  ><i class="fa-solid fa-house"></i> Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light active text-decoration-underline"
-                  href="../pages/Nosotros.html"
-                  >Nosotros</a
+                <a class="nav-link text-light" href="./error404.html"
+                  ><i class="fa-solid fa-gamepad"></i> Productos</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light disabled" aria-disabled="true"
-                  >Contacto</a
+                <a class="nav-link text-light" href="./Nosotros.html"
+                  ><i class="fa-solid fa-user-group"></i> Nosotros</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link text-light "
-                  href="../pages/login.html"
-                  >Login</a
-                >
+                <a class="nav-link text-light" id="abrirModalContacto" href="#">
+                  <i class="fa-solid fa-envelope"></i> Contacto
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/login.html"
+                  ><i class="fa-solid fa-right-to-bracket"></i> Login</a
                 >
               </li>
               <li>
-                <a class="nav-link text-light disabled" aria-disabled="true"
+                <a
+                  class="nav-link text-light"
+                  aria-disabled="true"
+                  href="/pages/error404.html"
                   ><i class="fa-solid fa-cart-shopping"></i
                 ></a>
               </li>
-              <li>
-                <!-- Inicio-barraBuscar -->
-                <form class="d-flex" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button class="btn btn-outline-light" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </form>
-                <!-- Fin Barra Buscar -->
-              </li>
             </ul>
           </div>
+          <li class="nav-link">
+            <a id="abrirModalAdmin" href="#">
+              <i class="fa-solid fa-gear fs-5 m-3"></i
+            ></a>
+          </li>
         </div>
       </nav>
     </header>
-    <main>
+    <main class="pt-5 mt-4">
       <section class="texto-principal text-light container">
         <h1 class="mt-4">Acerca de Nosotros</h1>
       </section>
@@ -183,10 +180,10 @@
       <section class="container">
         <h2 class="text-center text-light texto-principal">Nuestro Equipo</h2>
         <p class="text-center text-light">
-          Conoce a las mentes creativas detrás de GameCode🎮. Cada
-          miembro aporta habilidades únicas y un amor compartido por la
-          industria. Juntos, formamos un equipo dedicado a ofrecer lo mejor en
-          el universo gamer.
+          Conoce a las mentes creativas detrás de GameCode🎮. Cada miembro
+          aporta habilidades únicas y un amor compartido por la industria.
+          Juntos, formamos un equipo dedicado a ofrecer lo mejor en el universo
+          gamer.
         </p>
       </section>
 
@@ -197,7 +194,11 @@
               <div class="content">
                 <img src="../img/Pablo.jpg" alt="Pablo Moyano" />
                 <h2>Pablo Moyano</h2>
-                <a href="https://www.facebook.com/pablo.moyano.568?mibextid=gik2fB" target="_blank">Contactame</a>
+                <a
+                  href="https://www.facebook.com/pablo.moyano.568?mibextid=gik2fB"
+                  target="_blank"
+                  >Contactame</a
+                >
               </div>
             </div>
           </div>
@@ -207,7 +208,11 @@
               <div class="content">
                 <img src="../img/Anto.jpg" alt=" Antonella Ortega" />
                 <h2>Antonella Ortega</h2>
-                <a href="https://instagram.com/antoo_1817?igshid=NzZlODBkYWE4Ng==" target="_blank">Contactame</a>
+                <a
+                  href="https://instagram.com/antoo_1817?igshid=NzZlODBkYWE4Ng=="
+                  target="_blank"
+                  >Contactame</a
+                >
               </div>
             </div>
           </div>
@@ -216,7 +221,11 @@
               <div class="content">
                 <img src="../img/Adrian.jpg" alt="Adrian Chanampa" />
                 <h2>Adrian Chanampa</h2>
-                <a href="https://www.instagram.com/adrian.karma.chan/" target="_blank">Contactame</a>
+                <a
+                  href="https://www.instagram.com/adrian.karma.chan/"
+                  target="_blank"
+                  >Contactame</a
+                >
               </div>
             </div>
           </div>
@@ -228,7 +237,11 @@
               <div class="content">
                 <img src="../img/Julian.jpg" alt="Julian Navarro" />
                 <h2>Julian Navarro</h2>
-                <a href="https://www.instagram.com/toranzojuli?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">Contactame</a>
+                <a
+                  href="https://www.instagram.com/toranzojuli?igshid=OGQ5ZDc2ODk2ZA=="
+                  target="_blank"
+                  >Contactame</a
+                >
               </div>
             </div>
           </div>
@@ -238,7 +251,11 @@
               <div class="content">
                 <img src="../img/mascota2.jpeg" alt="Nuestra Mascota" />
                 <h2>Code Buddy</h2>
-                <a href="https://www.instagram.com/toranzojuli?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">Contactame</a>
+                <a
+                  href="https://www.instagram.com/toranzojuli?igshid=OGQ5ZDc2ODk2ZA=="
+                  target="_blank"
+                  >Contactame</a
+                >
               </div>
             </div>
           </div>
@@ -248,65 +265,74 @@
               <div class="content">
                 <img src="../img/Nico.jpg" alt="Nicolas Cosme" />
                 <h2>Nicolas Cosme</h2>
-                <a href="https://instagram.com/cosme_nicolas?igshid=NzZlODBkYWE4Ng==" target="_blank">Contactame</a>
+                <a
+                  href="https://instagram.com/cosme_nicolas?igshid=NzZlODBkYWE4Ng=="
+                  target="_blank"
+                  >Contactame</a
+                >
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="">
+    <footer>
       <div class="row-footer">
-     <div class="col-footer cuadroPrimero">
-            <img src="../img/sinFondo-removebg-preview.png" class="logo-footer ">
-            <p>Explora el épico universo gamer con estilo en GamerCode, tu destino para productos exclusivos. Eleva tu experiencia de juego con nuestra selección única. ¡Únete a la revolución gamer ahora!</p>
+        <div class="col-footer cuadroPrimero">
+          <img src="../img/sinFondo-removebg-preview.png" class="logo-footer" />
+          <p>
+            Explora el épico universo gamer con estilo en GamerCode, tu destino
+            para productos exclusivos. Eleva tu experiencia de juego con nuestra
+            selección única. ¡Únete a la revolución gamer ahora!
+          </p>
+        </div>
+        <div class="col-footer">
+          <h3>Oficinas</h3>
+          <p>San Lorenzo 723</p>
+          <p>San miguel de Tucuman</p>
+          <p>Tucumán CP 4000</p>
+
+          <p class="email-id">gamercode@gmail.com</p>
+          <h4>+54 381 59812</h4>
+        </div>
+        <div class="col-footer">
+          <h3 class="">Links</h3>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./error404.html">Producos</a></li>
+            <li><a href="./Nosotros.html">Nosotros</a></li>
+            <li>
+              <a href="./error404.html">Contacto</a>
+            </li>
+            <li><a href="./error404.html">Extra!</a></li>
+          </ul>
+        </div>
+        <div class="col-footer">
+          <h3>Boletin de Noticias</h3>
+          <form>
+            <i class="fa-regular fa-envelope me-3"></i>
+            <input type="email" placeholder="Ingrese su email" required />
+            <button type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="social-icons-footer">
+            <a href="#" style="--color: #0072b1">
+              <i class="fa-brands fa-twitter"> </i>
+            </a>
+            <a href="#" style="--color: #e1306c">
+              <i class="fa-brands fa-instagram"> </i>
+            </a>
+            <a href="#" style="--color: #4267b2">
+              <i class="fa-brands fa-facebook-f"> </i>
+            </a>
+            <a href="#" style="--color: #ff0050">
+              <i class="fa-brands fa-github"> </i>
+            </a>
           </div>
-     <div class="col-footer">
-      <h3>Oficinas</h3>
-      <p>San Lorenzo 723</p>
-      <p>San miguel de Tucuman</p>
-      <p>Tucumán CP 4000</p>
-      
-      <p class="email-id">gamercode@gmail.com</p>
-      <h4>+54 381 59812</h4>
-     </div>
-     <div class="col-footer ">
-      <h3 class="">Links</h3>
-      <ul>
-        <li> <a href="">Inicio</a></li>
-        <li> <a href="">Producos</a></li>
-        <li> <a href="">Nosotros</a></li>
-        <li> <a href="">Contacto</a></li>
-        <li> <a href="">Extra!</a></li>
-      </ul>
-     </div>
-     <div class="col-footer">
-      <h3>Boletin de Noticias</h3>
-      <form>
-        <i class="fa-regular fa-envelope me-3"></i> 
-        <input type="email" placeholder="Ingrese su email" required>
-        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
-       
-    </form>
-    <div class="social-icons-footer">
-      <a href="#" style="--color: #0072b1">
-       <i class="fa-brands fa-twitter"> </i>
-     </a> 
-     <a href="#" style="--color: #e1306c">
-       <i class="fa-brands fa-instagram"> </i>
-     </a> 
-     <a href="#" style="--color: #4267B2">
-       <i class="fa-brands fa-facebook-f"> </i>
-     </a> 
-     <a href="#" style="--color: #ff0050">
-       <i class="fa-brands fa-github"> </i>
-     </a> 
-    
-     </div>
-     </div>
-   
+        </div>
+      </div>
     </footer>
-  
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
