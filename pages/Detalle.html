@@ -19,27 +19,29 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <!-- fuente -->
+    <link rel="icon" href="/img/sinFondo-removebg-preview.png">
+
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-detalle.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Pixelify+Sans&family=Roboto&display=swap"
       rel="stylesheet"
     />
+    
+    
     <title>GameCode🎮</title>
-    <link rel="stylesheet" href="../css/footer.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/style-detalle.css" />
+    
   </head>
 
   <body>
     <header>
-      <nav
-        class="navbar navbar-expand-lg border-bottom border-body d-flex py-"
-        data-bs-theme="dark"
-      >
+      <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand logo-nav" href="/index.html">
+          <a class="navbar-brand logo-nav" href="../index.html">
             <img
               class="logo-nav ms-3"
               src="/img/sinFondo-removebg-preview.png"
@@ -59,65 +61,69 @@
           </button>
 
           <div
-            class="collapse navbar-collapse justify-content-lg-end me-3"
+            class="collapse navbar-collapse justify-content-lg-center"
             id="navbarNav"
           >
-            <ul class="navbar-nav">
+            <ul class="navbar-nav justify-content-center">
               <li class="nav-item">
                 <a
-                  class="nav-link text-light"
+                  class="nav-link active text-decoration-underline"
                   aria-current="page"
-                  href="/index.html"
-                  >Inicio</a
+                  href="../index.html"
+                  ><i class="fa-solid fa-house"></i> Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link active text-decoration-underline text-light"
-                  href="#"
-                  >Productos</a
+                <a class="nav-link text-light" href="./error404.html"
+                  ><i class="fa-solid fa-gamepad"></i> Productos</a
                 >
               </li>
+
               <li class="nav-item">
-                <a class="nav-link text-light" href="./pages/ListaDeseos.html"
+                <a class="nav-link text-light" href="./ListaDeseos.html"
                   ><i class="fa-solid fa-gamepad"></i> Deseados</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light disabled" aria-disabled="true"
-                  >Contacto</a
+                <a class="nav-link text-light" href="./Nosotros.html"
+                  ><i class="fa-solid fa-user-group"></i> Nosotros</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light disabled" aria-disabled="true"
-                  >Login</a
+                <a class="nav-link text-light" id="abrirModalContacto" href="#">
+                  <i class="fa-solid fa-envelope"></i> Contacto
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="../pages/login.html"
+                  ><i class="fa-solid fa-right-to-bracket"></i> Login</a
                 >
               </li>
               <li>
-                <a class="nav-link text-light disabled" aria-disabled="true"
+                <a
+                  class="nav-link text-light"
+                  aria-disabled="true"
+                  href="/pages/error404.html"
                   ><i class="fa-solid fa-cart-shopping"></i
                 ></a>
               </li>
-              <li>
-                <!-- Inicio-barraBuscar -->
-                <form class="d-flex" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button class="btn btn-outline-light" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </form>
-                <!-- Fin Barra Buscar -->
-              </li>
             </ul>
           </div>
+          <li id="botonAdicional" style="display: none">
+            <a
+              class="text-light text-decoration-none"
+              aria-disabled="true"
+              href="./administracion.html"
+            >
+              <i class="fa-solid fa-gear fs-5 m-1"></i>Administrador
+            </a>
+            <a href="../index.html"
+              ><i
+                class="fa-solid fa-right-from-bracket fs-5 m-3"
+                style="color: #f9fafb"
+              ></i>
+            </a>
+          </li>
         </div>
       </nav>
     </header>
