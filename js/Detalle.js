@@ -1,21 +1,29 @@
-//IMAGENES DE LOS PRODUCTOS
-let images = Array.from(document.getElementsByClassName("imgCarousel"))
 
-let mainPhoto = document.getElementById("mainPhoto")
+const parametroURL = new URLSearchParams(window.location.search);
 
-function updateImage(event){
-    let image = event.target
+let inventario = JSON.parse(localStorage.getItem("inventarioKey")) || [];
 
-    mainPhoto.src = image.src
-}
-
-images.forEach(function(image){
-    image.addEventListener("click",updateImage)
-});
+const productoBuscado = inventario.find(producto => producto.id === parametroURL.get('id'));
 
 
-// BOTON DE CANTIDAD
-var stockInicial = 85;
+
+let labelNombre = document.getElementById('producto-nombre');
+let labelPrecio = document.getElementById('producto-precio');
+let labelCategoria = document.getElementById('producto-categoria');
+let labelDescripcion = document.getElementById('producto-descripcion');
+let labelCodigo = document.getElementById('producto-id');
+let labelImagen = document.getElementById('producto-imagen');
+let labelStock = document.getElementById('producto-stock');
+
+
+
+labelNombre.innerHTML = productoBuscado.nombre;
+labelCategoria.innerHTML = productoBuscado.categoria;
+labelDescripcion.innerHTML = productoBuscado.descripcion;
+labelCodigo.innerHTML = productoBuscado.id;
+labelPrecio.innerHTML = `$${productoBuscado.precio} `;
+labelImagen.src = productoBuscado.imagen;
+labelStock.innerHTML = productoBuscado.stock;
 
   function incrementarCantidad() {
     let inputCantidad = document.getElementById("inputCantidad");
@@ -35,10 +43,10 @@ var stockInicial = 85;
 
   function actualizarStockDisponible() {
     let inputCantidad = document.getElementById("inputCantidad");
-    let stockDisponible = document.getElementById("stockDisponible");
+    let stockDisponible = document.getElementById("producto-stock");
 
     let cantidadSeleccionada = parseInt(inputCantidad.value, 10) || 0;
-    let nuevoStock = stockInicial - cantidadSeleccionada;
+    let nuevoStock = productoBuscado.stock - cantidadSeleccionada;
 
-    stockDisponible.textContent = "(" + nuevoStock + " Disponibles)";
+    stockDisponible.textContent = nuevoStock;
   }

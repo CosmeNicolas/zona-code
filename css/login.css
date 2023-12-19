@@ -2,7 +2,7 @@
   background-image: url(../img/1920x1200-px-blur-gaussian-1539045-wallhere.com.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 
@@ -12,5 +12,9 @@
   }
 
   .modal-registro{
-    background-color: rgb(6, 40, 78)
+    background-color: rgb(6, 40, 78);
   }
+
+.modal-header{
+  background-color: rgb(6, 40, 78)
+}
