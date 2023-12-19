@@ -36,29 +36,29 @@ function agregarListaDeseos(id) {
     const productos = JSON.parse(localStorage.getItem("inventarioKey")) || [];
     const productoDeseado = productos.find(producto => producto.id === id);
 
-    // Verificar si el producto no está ya en la lista de deseos
     const listaDeseos = JSON.parse(localStorage.getItem("listaDeseos")) || [];
     if (!listaDeseos.some(item => item.id === id)) {
         listaDeseos.push(productoDeseado);
         localStorage.setItem("listaDeseos", JSON.stringify(listaDeseos));
         Swal.fire({
             title: "Agregado",
-            text: "Poroducto Agregado con exito.",
+            text: "Agregado correctamente a la lista de deseados.",
             imageUrl: "../img/Agregado.jpeg",
-            imageWidth: 400,
+            imageWidth: 200,
             imageHeight: 200,
-            imageAlt: "Felicitaciones"
+            imageAlt: "PerroFeliz"
           });
     } else {
         Swal.fire({
             title: "Upss",
-            text: "Este producto ya esta agregado.",
+            text: "El producto ya existe en la lista.",
             imageUrl: "../img/Upss.jpeg",
-            imageWidth: 400,
+            imageWidth: 200,
             imageHeight: 200,
-            imageAlt: "Upss"
+            imageAlt: "PerroUpss"
           });
     }
 }
+
 
 

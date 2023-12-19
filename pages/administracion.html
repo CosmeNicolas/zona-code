@@ -13,7 +13,7 @@
       name="keywords"
       content="Productos Gamers, PC, perifericos, juegos, consolas, PS5, PS4, placa de video"
     />
-
+  <link rel="icon" href="/img/sinFondo-removebg-preview.png">
   <link rel="stylesheet" href="/css/administracion.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/login.css" />
@@ -33,6 +33,7 @@
     crossorigin="anonymous"
   />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
   <title>GameCode🎮</title>
 </head>
 
@@ -78,15 +79,16 @@
                 ><i class="fa-solid fa-gamepad"></i> Productos</a
               >
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-light" href="./ListaDeseos.html"
+                ><i class="fa-solid fa-gamepad"></i> Deseados</a
+              >
+            </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="./Nosotros.html"
                 ><i class="fa-solid fa-user-group"></i> Nosotros</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" id="abrirModalContacto" href="#">
-                <i class="fa-solid fa-envelope"></i> Contacto
-              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="../pages/login.html"
@@ -101,9 +103,24 @@
                 ><i class="fa-solid fa-cart-shopping"></i
               ></a>
             </li>
-            </ul>
+          </ul>
         </div>
-        </div>
+        <li id="botonAdicional" style="display: none">
+          <a
+            class="text-light text-decoration-none"
+            aria-disabled="true"
+            href="./administracion.html"
+          >
+            <i class="fa-solid fa-gear fs-5 m-1"></i>Administrador
+          </a>
+          <a href="../index.html"
+            ><i
+              class="fa-solid fa-right-from-bracket fs-5 m-3"
+              style="color: #f9fafb"
+            ></i>
+          </a>
+        </li>
+      </div>
     </nav>
   </header>
  
@@ -161,116 +178,6 @@
 
   </main>
 
-    <!-- Modal Contacto -->
-    <div
-    class="modal fade"
-    id="contactoModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="contactModalLabel"
-    aria-hidden="true"
-  >
-    <div
-      class="modal-dialog modal-lg modal-dialog-centered"
-      role="document"
-    >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title text-light text-center mx-auto me-3">
-            ¡Comunicate con nosotros!
-          </h4>
-          <button
-            type="button"
-            class="btn-close me-1"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body modal-contacto">
-          <div class="row">
-            <div class="col-md-6">
-              <form>
-                <div class="modalTexto text-light">
-                  <label for="nombre">Nombre</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    maxlength="30"
-                    minlength="2"
-                    id="nombre"
-                    placeholder="Nombre"
-                    required
-                  />
-                </div>
-                <div class="modalTexto mt-2 text-light">
-                  <label for="email">Correo Electrónico</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    maxlength="50"
-                    minlength="10"
-                    id="email"
-                    placeholder="Correo Electrónico"
-                    required
-                  />
-                </div>
-                <div class="modalTexto mt-2 text-light">
-                  <label for="mensaje">Mensaje</label>
-                  <textarea
-                    class="form-control"
-                    id="mensaje"
-                    maxlength="150"
-                    minlength="10"
-                    rows="3"
-                    placeholder="Mensaje"
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn mt-2 me-2 btn-primary">
-                  Enviar
-                </button>
-              </form>
-            </div>
-            <div class="col-md-6">
-              <p
-                class="d-flex justify-content-center modalTexto text-light"
-              >
-                Encuentranos Aquí
-              </p>
-              <iframe
-                class="img-fluid"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1224557766204!2d-65.20948482454776!3d-26.83605719000534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0ef228d361%3A0x2bf6f10cbd5f68fa!2sGral.%20Paz%20565%2C%20T4000BLK%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1695871097105!5m2!1ses-419!2sar"
-                width="600"
-                height="950"
-                style="border: 0"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-              <p
-                class="d-flex justify-content-center modalTexto m-2 text-light"
-              >
-                Nuestras Redes
-              </p>
-              <div class="d-flex justify-content-center">
-                <a type="submit" href="./pages/error404.html" 
-                  ><img
-                    src="../img/facebook-logo.png"
-                    alt="logo face"
-                    width="65"
-                /></a>
-                <a type="submit" href="./pages/error404.html"
-                  ><img
-                    src="../img/logo-instagram.png"
-                    alt="logo Instagram"
-                    width="65"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="administrarProducto" tabindex="-1" aria-labelledby="administrarProductoLabel"
@@ -316,6 +223,7 @@
       </div>
     </div>
   </div>
+  
 </div>
 </div>
 </section>
@@ -362,16 +270,16 @@
         </button>
       </form>
       <div class="social-icons-footer">
-        <a href="#" style="--color: #0072b1">
+        <a href="./pages/error404.html" target="_blank" style="--color: #0072b1">
           <i class="fa-brands fa-twitter"> </i>
         </a>
-        <a href="#" style="--color: #e1306c">
+        <a href="https://www.instagram.com/zonacoderc?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" style="--color: #e1306c">
           <i class="fa-brands fa-instagram"> </i>
         </a>
-        <a href="#" style="--color: #4267b2">
+        <a href="https://www.facebook.com/ZonaCodeRC/" target="_blank" style="--color: #4267b2">
           <i class="fa-brands fa-facebook-f"> </i>
         </a>
-        <a href="#" style="--color: #ff0050">
+        <a href="https://github.com/CosmeNicolas/zona-code" target="_blank" style="--color: #ff0050">
           <i class="fa-brands fa-github"> </i>
         </a>
       </div>

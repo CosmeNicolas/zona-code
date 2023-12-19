@@ -75,14 +75,3 @@ function mostrarBotonAdicional() {
 }
 
 
-function pasarElementoAOtraPagina() {
-  // Obtener el elemento que quieres llevar a otra página
-  let elemento = document.getElementById("miElemento");
-
-  // Guardar el contenido del elemento en localStorage
-  localStorage.setItem("elementoParaLlevar", elemento.innerHTML);
-
-  // Redirigir a la otra página
-  window.location.href = "Nosotros.html";
-}
-
