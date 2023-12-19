@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="card-footer-prod text-light">
                 <div class="d-flex justify-content-around">
-        
-                        <button class="wishlist-button" onclick="agregarListaDeseos('${producto.id}')">Quitar de lista de deseados</button>
+                <button class="remove-button" onclick="eliminarListaDeseos('${producto.id}')">Eliminar</button>
                     <p class="card-text text-light">Precio: <button class="price-button text-black">${producto.precio}</button></p>
                 </div>
 
@@ -25,3 +24,49 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(card);
     });
 });
+
+function eliminarListaDeseos(id) {
+    const listaDeseos = JSON.parse(localStorage.getItem("listaDeseos")) || [];
+    const index = listaDeseos.findIndex(item => item.id === id);
+
+    if (index !== -1) {
+        listaDeseos.splice(index, 1);
+        localStorage.setItem("listaDeseos", JSON.stringify(listaDeseos));
+        actualizarListaDeseos(); // Opcional: Puedes agregar una función para actualizar la interfaz de inmediato
+        Swal.fire({
+            title: "Eliminado",
+            text: "Lamentamos que tu producto ya no lo desees.",
+            imageUrl: "../img/Quitar.jpeg",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "PerroTriste"
+          });
+    }
+}
+
+function actualizarListaDeseos() {
+    const container = document.getElementById('wishlist-container');
+    // Elimina todos los elementos hijos del contenedor
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+
+    const listaDeseos = JSON.parse(localStorage.getItem("listaDeseos")) || [];
+    listaDeseos.forEach(producto => {
+        const card = document.createElement('div');
+        card.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top pt-2">
+            <div class="card-body-prod">
+                <h5 class="card-title-prod text-light py-2">${producto.nombre}</h5>
+            </div>
+            <div class="card-footer-prod text-light">
+                <div class="d-flex justify-content-around">
+                    <button class="remove-button" onclick="eliminarListaDeseos('${producto.id}')">Eliminar</button>
+                    <!-- Otros elementos de la tarjeta si es necesario -->
+                </div>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
