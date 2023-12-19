@@ -10,6 +10,10 @@ Trabajamos todas las operaciones del ***CRUD*** (en el registro de usuarios y en
 - [CSSGradient](https://cssgradient.io/gradient-backgrounds/)
 - [Favicon](https://favicon.io/)
 
+## Deploy💕
+- https://gamecode-rolling.netlify.app/
+
+
 
 ## Metodología Ágil - Scrum 📝
 Este proyecto ha sido ejecutado bajo la metodología ágil Scrum, caracterizada por su enfoque colaborativo y flexible que posibilita la gestión iterativa e incremental de proyectos de desarrollo de software. Este marco de trabajo facilita la adaptabilidad continua y la entrega progresiva de soluciones a lo largo del proceso.
