@@ -29,7 +29,7 @@ const crearProducto = (e) => {
   e.preventDefault();
 
   const urlImagenValida = validarUrlImagen(imagen.value);
-  if (validarCantidadCaracteres(nombre.value, 2, 20) && validarCantidadCaracteres(categoria.value, 2, 20) && validarCantidadCaracteres(descripcion.value, 5, 25) &&
+  if (validarCantidadCaracteres(nombre.value, 2, 20) && validarCantidadCaracteres(categoria.value, 2, 20) && validarCantidadCaracteres(descripcion.value, 5, 500) &&
     urlImagenValida) {
     const nuevoProducto = new Producto(
       undefined,
