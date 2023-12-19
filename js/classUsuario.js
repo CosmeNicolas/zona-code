@@ -36,7 +36,7 @@ export default class Usuario {
     return this.#contraseña;
   }
   set contraseña(nuevaContraseña) {
-    this.#contraseña = nuevaContraseñaontraseña;
+    this.#contraseña = nuevaContraseña;
   }
   toJSON() {
     return {
