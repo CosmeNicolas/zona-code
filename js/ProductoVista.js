@@ -41,9 +41,23 @@ function agregarListaDeseos(id) {
     if (!listaDeseos.some(item => item.id === id)) {
         listaDeseos.push(productoDeseado);
         localStorage.setItem("listaDeseos", JSON.stringify(listaDeseos));
-        alert("Producto agregado a la Lista de Deseos");
+        Swal.fire({
+            title: "Agregado",
+            text: "Agregado correctamente a la lista de deseados.",
+            imageUrl: "../img/Agregado.jpeg",
+            imageWidth: 200,
+            imageHeight: 200,
+            imageAlt: "PerroFeliz"
+          });
     } else {
-        alert("El producto ya está en la Lista de Deseos");
+        Swal.fire({
+            title: "Upss",
+            text: "El producto ya existe en la lista.",
+            imageUrl: "../img/Upss.jpeg",
+            imageWidth: 200,
+            imageHeight: 200,
+            imageAlt: "PerroUpss"
+          });
     }
 }
 

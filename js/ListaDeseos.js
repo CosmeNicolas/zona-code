@@ -34,7 +34,7 @@ function eliminarListaDeseos(id) {
             title: "Eliminado",
             text: "Lamentamos que tu producto ya no lo desees.",
             imageUrl: "../img/Quitar.jpeg",
-            imageWidth: 400,
+            imageWidth: 200,
             imageHeight: 200,
             imageAlt: "PerroTriste"
           });
