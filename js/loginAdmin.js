@@ -13,27 +13,21 @@ function iniciarSesion() {
     return;
   }
 
+
   if (usuario === "Gamer" && contraseña === "1234") {
     borrarmensaje();
-     mensajeDeIngreso.textContent =
+    mensajeDeIngreso.textContent =
       "Datos ingresados correctamente!, se dirige a pagina administrador";
     setTimeout(() => {
       window.location = "administracion.html";
     }, 6000);
+    mostrarBotonAdicional();
   } else {
     errorMensaje.textContent = "Usuario o Contraseña incorrectos";
     limpiarFormulario();
   }
+  
 }
-/* function verificarSesionIniciada(){
-  if (datosEnLocalStorage.length > 0) {
-    let contenedorLogin = document.getElementById("contenedorLogin")
-    contenedorLogin.innerHTML = `<h1>La sesión ya se encuentra iniciada. Vamos a redirigirte al panel de administrador...</h1>`
-    setTimeout(() => {
-      window.location.href = window.origin + "/pages/administrador.html";
-    }, 5000);
-  }
-} */
 
 function validarCampos(usuario, contraseña) {
   const soloLetrasNumeros = /^[a-zA-Z0-9]+$/;
@@ -66,9 +60,29 @@ function validarCampos(usuario, contraseña) {
 
 function limpiarFormulario() {
   formLogin.reset();
-  
 }
 
 function borrarmensaje() {
   document.getElementById("errorMensaje").textContent = "";
 }
+
+function mostrarBotonAdicional() {
+  // Muestra el botón o campo de entrada adicional
+  const botonAdicional = document.getElementById("botonAdicional");
+  if (botonAdicional) {
+    botonAdicional.style.display = "block"; // O utiliza "inline" o cualquier otro estilo según tus necesidades
+  }
+}
+
+
+function pasarElementoAOtraPagina() {
+  // Obtener el elemento que quieres llevar a otra página
+  let elemento = document.getElementById("miElemento");
+
+  // Guardar el contenido del elemento en localStorage
+  localStorage.setItem("elementoParaLlevar", elemento.innerHTML);
+
+  // Redirigir a la otra página
+  window.location.href = "Nosotros.html";
+}
+
