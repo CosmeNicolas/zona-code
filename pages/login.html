@@ -99,7 +99,7 @@
             </ul>
           </div>
           <li class="nav-link">
-            <a id="abrirModalAdmin" href="#">
+            <a id="" href="#">
               <i class="fa-solid fa-gear fs-5 m-3"></i
             ></a>
           </li>
@@ -115,33 +115,35 @@
                 ><i class="fa-solid fa-circle-arrow-left tamIcono fa-2x"></i
               ></a>
               <h2 class="text-center">Bienvenido</h2>
-              <form class="justify-content-center" id="userform">
+              <form class="justify-content-center" id="formLogin">
                 <div>
-                  <label for="email" class="form-label"
-                    >Correo Electrónico</label
+                  <label for="usuario" class="form-label"
+                    >Nombre de usuario</label
                   >
                   <input
-                    type="email"
-                    id="email"
+                    id="usuario"
+                    type="text"
                     class="form-control tamInp"
-                    maxlength="30"
-                    minlength="5"
-                    name="email"
+                    maxlength="15"
+                    minlength="4"
+                    placeholder="Usuario"
                     required
                   />
                 </div>
                 <div class="my-3">
-                  <label for="password" class="form-label">Contraseña</label>
+                  <label for="clave" class="form-label">Contraseña</label>
                   <input
                     type="password"
-                    id="password"
+                    id="clave"
                     class="form-control tamInp"
-                    min="4"
-                    max="10"
-                    name="password"
+                    maxlength="15"
+                    minlength="4"
+                    placeholder="Contraseña"
+                    autocomplete="off"
                     required
                   />
                 </div>
+                <div class="text-danger fs-6" id="errorMensaje"></div>
                 <div class="mb-4 form-check">
                   <input
                     type="checkbox"
@@ -154,10 +156,10 @@
                 </div>
                 <div class="d-flex justify-content-center">
                   <input
-                    type="submit"
+                    type="button"
                     value="Iniciar Sesión"
                     class="btn btn-info"
-                    href="../index.html"
+                    onclick="iniciarSesion()"
                   />
                 </div>
                 <div class="my-3 text-center">
@@ -308,77 +310,7 @@
         </div>
       </div>
 
-      <!-- Modal Administrador -->
-      <div
-        class="modal fade text-center"
-        id="contactoAdmin"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-content text-center">
-          <div class="modal-header">
-            <h5>Iniciar como Administrador</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              onclick="cerrar()"
-            ></button>
-          </div>
-          <div class="modal-body modal-contacto">
-            <div class="row">
-              <div class="col-md-6">
-                <form id="formLogin">
-                  <div class="text-light">
-                    <label for="usuario">Usuario</label>
-                    <input
-                      id="usuario"
-                      type="text"
-                      class="form-control"
-                      maxlength="15"
-                      minlength="4"
-                      placeholder="Usuario"
-                      required
-                    />
-                  </div>
-                  <div class="modalTexto text-light">
-                    <label for="clave">Contraseña</label>
-                    <input
-                      id="clave"
-                      input
-                      type="password"
-                      class="form-control"
-                      maxlength="15"
-                      minlength="4"
-                      id="email"
-                      placeholder="Contraseña"
-                      autocomplete="off"
-                      required
-                    />
-                  </div>
-                  <imput
-                    type="button"
-                    class="btn mt-2 me-2 btn-primary"
-                    value="Entrar"
-                    onclick="iniciarSesion()"
-                  />
-                  Iniciar Sesión
-                </form>
-              </div>
-              <div class="col-md-6">
-                <img
-                  class="w-75"
-                  src="../img/sinFondo-removebg-preview.png"
-                  alt="logoLogin"
-                />
-              </div>
-              <div class="text-light fs-6 mt-2" id="errorMensaje"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </main>
 
     <div

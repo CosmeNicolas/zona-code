@@ -1,16 +1,3 @@
-const modalAdmin = new bootstrap.Modal(
-  document.getElementById("contactoAdmin")
-);
-const abrirModalAdmin = document.getElementById("abrirModalAdmin");
-const formLogin = document.getElementById("formLogin");
-const errorMensaje = document.getElementById("errorMensaje");
-
-abrirModalAdmin.addEventListener("click", mostrarModalAdmin);
-
-function mostrarModalAdmin() {
-  modalAdmin.show();
-}
-
 function iniciarSesion() {
   let usuario = document.getElementById("usuario").value;
   let contraseña = document.getElementById("clave").value;
@@ -54,14 +41,7 @@ function validarCampos(usuario, contraseña) {
   
 }
 
-
-
 function limpiarFormulario() {
   formLogin.reset();
 }
 
-function cerrar() {
-  document.getElementById("usuario").value = "";
-  document.getElementById("clave").value = "";
-  document.getElementById("errorMensaje").textContent = "";
-}
