@@ -4,7 +4,7 @@ Esta página es un E-commerce ficticio para un trabajo práctico grupal. La prá
 Trabajamos todas las operaciones del ***CRUD*** (en el registro de usuarios y en el registro de productos).
 
 ## Librerías utilizadas 📚
-- [Bootstrap (v5.3.2)](https://getbootstrap.com/)
+- [Bootstrap (v5.3)](https://getbootstrap.com/)
 - [SweetAlert (v11.10.1)](https://sweetalert2.github.io/)
 - [FontAwesome (v6.5.1)](https://fontawesome.com/)
 - [CSSGradient](https://cssgradient.io/gradient-backgrounds/)
