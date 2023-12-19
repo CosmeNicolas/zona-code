@@ -13,7 +13,7 @@
       name="keywords"
       content="Productos Gamers, PC, perifericos, juegos, consolas, PS5, PS4, placa de video"
     />
-
+  <link rel="icon" href="/img/sinFondo-removebg-preview.png">
   <link rel="stylesheet" href="/css/administracion.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/login.css" />
@@ -33,6 +33,7 @@
     crossorigin="anonymous"
   />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
   <title>GameCode🎮</title>
 </head>
 
@@ -78,6 +79,12 @@
                 ><i class="fa-solid fa-gamepad"></i> Productos</a
               >
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-light" href="./ListaDeseos.html"
+                ><i class="fa-solid fa-gamepad"></i> Deseados</a
+              >
+            </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="./Nosotros.html"
                 ><i class="fa-solid fa-user-group"></i> Nosotros</a
@@ -101,9 +108,24 @@
                 ><i class="fa-solid fa-cart-shopping"></i
               ></a>
             </li>
-            </ul>
+          </ul>
         </div>
-        </div>
+        <li id="botonAdicional" style="display: none">
+          <a
+            class="text-light text-decoration-none"
+            aria-disabled="true"
+            href="./administracion.html"
+          >
+            <i class="fa-solid fa-gear fs-5 m-1"></i>Administrador
+          </a>
+          <a href="../index.html"
+            ><i
+              class="fa-solid fa-right-from-bracket fs-5 m-3"
+              style="color: #f9fafb"
+            ></i>
+          </a>
+        </li>
+      </div>
     </nav>
   </header>
  

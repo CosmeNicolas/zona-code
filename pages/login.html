@@ -13,6 +13,11 @@
       content="Productos Gamers, PC, perifericos, juegos, consolas, PS5, PS4, placa de video"
     />
 
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    
+    <link rel="icon" href="/img/sinFondo-removebg-preview.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,9 +30,6 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="../css/login.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
 
     <title>GameCode🎮</title>
   </head>
@@ -73,6 +75,12 @@
                   ><i class="fa-solid fa-gamepad"></i> Productos</a
                 >
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light" href="./ListaDeseos.html"
+                  ><i class="fa-solid fa-gamepad"></i> Deseados</a
+                >
+              </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="./Nosotros.html"
                   ><i class="fa-solid fa-user-group"></i> Nosotros</a
@@ -99,8 +107,18 @@
             </ul>
           </div>
           <li id="botonAdicional" style="display: none">
-            <a href="./administracion.html">
-              <i class="fa-solid fa-gear fs-5 m-3"></i>
+            <a
+              class="text-light text-decoration-none"
+              aria-disabled="true"
+              href="./administracion.html"
+            >
+              <i class="fa-solid fa-gear fs-5 m-1"></i>Administrador
+            </a>
+            <a href="../index.html"
+              ><i
+                class="fa-solid fa-right-from-bracket fs-5 m-3"
+                style="color: #f9fafb"
+              ></i>
             </a>
           </li>
         </div>
@@ -222,7 +240,7 @@
         >
           <div class="modal-content">
             <div class="modal-header">
-               <h4 class="modal-title text-light text-center mx-auto me-3">
+              <h4 class="modal-title text-light text-center mx-auto me-3">
                 ¡Comunicate con nosotros!
               </h4>
               <button
