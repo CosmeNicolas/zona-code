@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     productos.forEach(producto => {
         const card = document.createElement('div');
-
         card.className = 'card-principal-productos m-2 col-lg-3 col-md-5 col-12'; 
         card.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}" class="card-img-top pt-2">

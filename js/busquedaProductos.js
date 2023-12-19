@@ -9,7 +9,7 @@ formularioBusqueda.addEventListener('submit', (e) => {
 
 const productosTotales = document.querySelectorAll(".card");
 
-document.addEventListener('keyup', (e) => {
+document.addEventListener('keydown', (e) => {
   if (e.key === "Escape") {
     e.target.value = "";
   }
