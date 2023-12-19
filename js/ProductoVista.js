@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button
                         class="detail-button" 
                         onclick="navegarPaginaDetalle('${producto.id}')">Ver Detalle</button>
+                        <button class="wishlist-button detail-button m-2" 
+                        onclick="agregarListaDeseos('${producto.id}')">Deseados</button>
                     <p class="card-text text-light">Precio: <button class="price-button text-black">${producto.precio}</button></p>
                 </div>
 
@@ -31,3 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function agregarListaDeseos(id) {
+    const productos = JSON.parse(localStorage.getItem("inventarioKey")) || [];
+    const productoDeseado = productos.find(producto => producto.id === id);
+
+    // Verificar si el producto no está ya en la lista de deseos
+    const listaDeseos = JSON.parse(localStorage.getItem("listaDeseos")) || [];
+    if (!listaDeseos.some(item => item.id === id)) {
+        listaDeseos.push(productoDeseado);
+        localStorage.setItem("listaDeseos", JSON.stringify(listaDeseos));
+        alert("Producto agregado a la Lista de Deseos");
+    } else {
+        alert("El producto ya está en la Lista de Deseos");
+    }
+}
